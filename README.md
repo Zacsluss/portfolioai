@@ -24,7 +24,7 @@
 <p align="center">
   <img src="https://img.shields.io/github/stars/Zacsluss/portfolioai?style=social" alt="Stars"/>
   <img src="https://img.shields.io/github/forks/Zacsluss/portfolioai?style=social" alt="Forks"/>
-  <img src="https://img.shields.io/github/license/Zacsluss/portfolioai?style=flat-square&color=555555" alt="License"/>
+  <img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="License"/>
   <img src="https://img.shields.io/github/last-commit/Zacsluss/portfolioai?style=flat-square&color=666666" alt="Last Commit"/>
 </p>
 
