@@ -6,17 +6,17 @@
 <br/>
 
 <!-- Animated Subtitle -->
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=00FF88&center=true&vCenter=true&random=false&width=700&lines=GPT-4o+%E2%80%A2+Whisper+API+%E2%80%A2+Next.js+14;Conversational+Career+Assistant+(ZARVIS);TypeScript+%E2%80%A2+Vercel+%E2%80%A2+Framer+Motion" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=2d9a5e&center=true&vCenter=true&random=false&width=700&lines=GPT-4o+%E2%80%A2+Whisper+API+%E2%80%A2+Next.js+14;Conversational+Career+Assistant+(ZARVIS);TypeScript+%E2%80%A2+Vercel+%E2%80%A2+Framer+Motion" alt="Typing SVG" />
 
 <br/>
 
 <!-- Main Action Buttons -->
 <p align="center">
   <a href="https://ai-portfolio-hazel-nine.vercel.app">
-    <img src="https://img.shields.io/badge/🤖_TALK-TO_ZARVIS-00ff88?style=for-the-badge&labelColor=000000&logo=openai&logoColor=white" alt="Try Demo"/>
+    <img src="https://img.shields.io/badge/🤖_TALK-TO_ZARVIS-2d7a3e?style=for-the-badge&labelColor=000000&logo=openai&logoColor=white" alt="Try Demo"/>
   </a>
   <a href="https://github.com/Zacsluss/portfolioai/archive/refs/heads/main.zip">
-    <img src="https://img.shields.io/badge/⬇️_DOWNLOAD-ZIP-4078c0?style=for-the-badge&labelColor=000000&logo=download&logoColor=white" alt="Download"/>
+    <img src="https://img.shields.io/badge/⬇️_DOWNLOAD-ZIP-0366d6?style=for-the-badge&labelColor=000000&logo=download&logoColor=white" alt="Download"/>
   </a>
 </p>
 
