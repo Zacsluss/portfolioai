@@ -59,19 +59,19 @@
 <table>
   <tr>
     <td align="center">
-      <img src="https://img.shields.io/badge/AI-GPT--4o-00ff88?style=flat-square&logo=openai&logoColor=white"/><br/>
+      <img src="https://img.shields.io/badge/AI-GPT--4o-2d7a3e?style=flat-square&logo=openai&logoColor=white"/><br/>
       <sub><b>Conversation</b></sub>
     </td>
     <td align="center">
-      <img src="https://img.shields.io/badge/Voice-Whisper_API-0088ff?style=flat-square&logo=microphone&logoColor=white"/><br/>
+      <img src="https://img.shields.io/badge/Voice-Whisper_API-1E4A6D?style=flat-square&logo=microphone&logoColor=white"/><br/>
       <sub><b>Transcription</b></sub>
     </td>
     <td align="center">
-      <img src="https://img.shields.io/badge/Framework-Next.js_14-ff6b6b?style=flat-square&logo=nextdotjs&logoColor=white"/><br/>
+      <img src="https://img.shields.io/badge/Framework-Next.js_14-8B3A3A?style=flat-square&logo=nextdotjs&logoColor=white"/><br/>
       <sub><b>Web Stack</b></sub>
     </td>
     <td align="center">
-      <img src="https://img.shields.io/badge/Load-<1s-ffd93d?style=flat-square&logo=speedtest&logoColor=white"/><br/>
+      <img src="https://img.shields.io/badge/Load-<1s-8B6914?style=flat-square&logo=speedtest&logoColor=white"/><br/>
       <sub><b>Page Speed</b></sub>
     </td>
   </tr>
@@ -261,8 +261,8 @@ This project is open source under the MIT License. Fork it, modify it, use it fo
 
 **Built by [Zachary Sluss](https://github.com/Zacsluss)** • MIT License
 
-[![Portfolio](https://img.shields.io/badge/🌐_My_Portfolio-00ff88?style=flat-square)](https://zacsluss.github.io/portfolio)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/zacharyjsluss)
-[![Email](https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:zacsluss@yahoo.com)
+[![Portfolio](https://img.shields.io/badge/🌐_My_Portfolio-2d7a3e?style=flat-square)](https://zacsluss.github.io/portfolio)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0055A4?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/zacharyjsluss)
+[![Email](https://img.shields.io/badge/Email-8B2E0F?style=flat-square&logo=gmail&logoColor=white)](mailto:zacsluss@yahoo.com)
 
 </div>
