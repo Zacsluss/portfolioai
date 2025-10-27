@@ -30,7 +30,7 @@ export function About() {
     <section
       id="about"
       ref={ref}
-      className="relative min-h-screen flex items-center py-20 px-4 sm:px-6 lg:px-8 overflow-hidden"
+      className="relative flex items-center py-12 px-4 sm:px-6 lg:px-8 overflow-hidden"
       onMouseMove={handleMouseMove}
     >
       {/* Ambient particles */}
