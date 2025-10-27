@@ -1,153 +1,132 @@
-# Hey, I'm Zac! 👋
+<div align="center">
 
-**Welcome to my AI-powered portfolio** — where my resume meets GPT-4o and actually talks back.
+# AI-Powered Portfolio
 
-I'm a **Lead CRM Systems Analyst** who's spent 7 years architecting Salesforce solutions for Fortune 500 companies across 22 countries. But instead of just listing that on a PDF, I built an AI assistant that knows my entire career and can chat with you about it.
+### Interactive career assistant powered by GPT-4o—your resume, but it talks back
 
-**Meet ZARVIS** — my digital clone. Ask about my work, challenge it to explain complex enterprise architecture, or switch gears and have it run a D&D campaign. Yes, really.
+**[Try Live Demo](https://ai-portfolio-hazel-nine.vercel.app)** • **[Download](https://github.com/Zacsluss/portfolioai/archive/refs/heads/main.zip)**
 
----
-
-## 🚀 Try It Live
-
-[![Open Live Site](https://img.shields.io/badge/🌐_OPEN_LIVE_SITE-2d7a3e?style=for-the-badge&logoColor=white)](https://ai-portfolio-hazel-nine.vercel.app)
-[![Download & Use](https://img.shields.io/badge/⬇️_DOWNLOAD_&_USE-d97706?style=for-the-badge&logoColor=white)](https://github.com/Zacsluss/portfolioai/archive/refs/heads/main.zip)
-[![Star on GitHub](https://img.shields.io/github/stars/Zacsluss/portfolioai?style=for-the-badge&color=00ff41)](https://github.com/Zacsluss/portfolioai/stargazers)
-
-> **This is both a tech demo and my actual portfolio.** Feel free to clone it, use it, and make it your own!
+</div>
 
 ---
 
-## 💡 What Makes This Different
+## What This Is
 
-Most portfolios are static. Mine has a **GPT-4o-powered AI assistant** trained on my entire career.
+An AI-powered portfolio that replaces static career documents with a conversational assistant named ZARVIS. Instead of reading bullet points, visitors engage in natural dialogue about 7 years of enterprise Salesforce architecture across 22 countries. Ask about specific projects, technical decisions, or certifications—ZARVIS understands context and provides detailed responses drawn from my complete professional history.
 
-**Try asking ZARVIS:**
-- "What's Zac's Salesforce experience?"
-- "Tell me about his biggest project"
-- "Can you run a D&D campaign?" (seriously, try it)
-- "Show me his technical skills"
+The technical challenge was integrating GPT-4o into a production-grade portfolio that serves as both a demonstration of AI integration capabilities and a functional career showcase. The result is a Next.js 14 application with server-side API routes protecting sensitive keys, streaming responses for optimal perceived performance, and Whisper API integration for real-time voice transcription.
 
-It actually understands context. It can switch from enterprise consultant to dungeon master. It's not just keyword matching — it's a real conversation.
+**Key Stats:**
+- Next.js 14 with App Router and server-side API routes
+- GPT-4o for conversational intelligence with full career context
+- Whisper API for voice-to-text transcription
+- TypeScript 5.3 strict mode throughout (zero ESLint warnings)
+- Sub-1-second page loads via static export
+- Vercel serverless deployment with edge functions
+- Glassmorphism UI with Framer Motion animations
 
----
+## Core Features
 
-## 📊 Quick Stats
+**Conversational AI:** ZARVIS is trained on my complete career history—15+ Fortune 500 Salesforce implementations, solutions deployed across 22 countries, complex integrations, data migrations, and custom Lightning components. It understands context and can discuss technical architecture decisions, project challenges, and specific client scenarios.
 
-| What | Details |
-|------|---------|
-| **💼 Experience** | 7 years in enterprise Salesforce architecture |
-| **🌍 Global Reach** | Solutions deployed across 22 countries |
-| **🏆 Projects Led** | 15+ Fortune 500 implementations |
-| **🤖 AI Stack** | GPT-4o + Whisper + Real-time Voice |
-| **⚡ Tech Stack** | Next.js 14, TypeScript, Tailwind, Zustand |
-| **📜 Certifications** | Salesforce Admin + Platform App Builder |
+**Voice Integration:** Real-time speech-to-text using OpenAI's Whisper API enables natural voice conversations. Speak questions naturally instead of typing—ZARVIS responds with both text and text-to-speech output.
 
----
+**Dual Mode:** Beyond professional consulting, ZARVIS can switch contexts entirely—ask it to run a D&D campaign and watch it shift from enterprise architect to dungeon master. This demonstrates the flexibility of contextual AI systems and makes the portfolio memorable.
 
-## 🛠️ Built With
+## Technical Stack
 
-- **Next.js 14** — App Router with API routes for AI integration
-- **OpenAI GPT-4o** — Powers ZARVIS with full career knowledge
-- **TypeScript** — End-to-end type safety, strict mode
-- **Tailwind CSS** — Glassmorphism design with holographic effects
-- **Whisper API** — Real-time voice transcription
-- **Vercel** — Serverless deployment with edge functions
+Built with modern web technologies prioritizing performance, type safety, and maintainability.
 
----
+**Framework & Language:**
+- Next.js 14 with App Router for optimal routing and server components
+- TypeScript 5.3 with strict mode enabled (full type safety)
+- Server-side API routes protect OpenAI API keys from client exposure
 
-## 🎯 Use This Yourself (Open Source!)
+**AI Integration:**
+- GPT-4o for conversational responses with streaming support
+- OpenAI Whisper API for voice transcription
+- Custom system prompts trained on complete career history
+- Context management for multi-turn conversations
 
-Want to build your own AI-powered portfolio? Here's how:
+**State & Styling:**
+- Zustand for lightweight client-side state management
+- Tailwind CSS with custom glassmorphism components
+- Framer Motion for fluid animations
+- Responsive design with mobile optimization
 
+**Deployment:**
+- Vercel serverless functions with edge runtime
+- Environment variable management for API keys
+- Static export optimization for fast initial loads
+- Cost: ~$5-20/month for OpenAI API usage
+
+## Quick Start
+
+**Online:** Visit [ai-portfolio-hazel-nine.vercel.app](https://ai-portfolio-hazel-nine.vercel.app)
+
+**Local Development:**
 ```bash
-# 1. Download & extract (or clone)
 git clone https://github.com/Zacsluss/portfolioai.git
 cd portfolioai
-
-# 2. Install dependencies
 npm install
 
-# 3. Add your OpenAI API key
-cp .env.local.example .env.local
-# Edit .env.local and add: OPENAI_API_KEY=your_key_here
+# Create .env.local file
+echo "OPENAI_API_KEY=your_key_here" > .env.local
 
-# 4. Customize the content
-# Edit lib/portfolio-data.ts with your info
-# Edit lib/assistant-context.ts to train the AI on your background
-
-# 5. Run locally
+# Run development server
 npm run dev
+# Visit http://localhost:3000
 ```
 
-Visit `http://localhost:3000` and you're live!
-
-### 🚀 Deploy to Vercel (Free)
-
+**Deployment:**
+Deploy to Vercel with one click:
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Zacsluss/portfolioai)
 
-Click the button above, add your `OPENAI_API_KEY` environment variable, and you're deployed in 60 seconds.
+Add your `OPENAI_API_KEY` environment variable in Vercel dashboard and deploy.
 
-**Cost:** ~$5-20/month for OpenAI API usage (based on traffic)
+## Customization
 
----
+To adapt this portfolio for your own use:
 
-## 🎨 What I Do
+1. **Edit Career Data:** Update `lib/portfolio-data.ts` with your professional history, skills, and projects
+2. **Train the AI:** Modify `lib/assistant-context.ts` with your background, experiences, and personality
+3. **Customize Styling:** Adjust Tailwind configuration and theme colors in `tailwind.config.js`
+4. **Add Features:** Extend API routes in `app/api/` for additional functionality
 
-### Enterprise Salesforce Architecture
-- Led 15+ implementations across financial services, healthcare, manufacturing
-- Architected solutions for clients in 22 countries
-- Complex integrations, data migrations, custom Lightning components
+## Why I Built This
 
-### AI & Voice Integration
-- Built this full-stack AI portfolio with real-time voice
-- Production-ready OpenAI integration with proper error handling
-- Custom Whisper transcription pipeline
+As someone managing enterprise platforms serving 3,000+ users across 22 countries, I built this to demonstrate AI integration capabilities while solving a practical problem: traditional portfolios are passive and forgettable.
 
-### Creative Work
-- FAA-licensed commercial drone pilot
-- Digital art & Adobe Creative Suite
-- Music production (Ableton, Logic Pro)
+Static PDFs get skimmed. Static websites get skipped. An AI assistant that can discuss my career in real-time creates memorable interactions with recruiters and hiring managers while simultaneously demonstrating full-stack development, production-ready AI integration, and thoughtful design decisions.
 
----
+The constraint of public deployment forced robust architecture. API keys must be protected server-side. Streaming responses must handle connection failures gracefully. Voice transcription needs error handling for network timeouts. These aren't academic exercises—they're production requirements.
 
-## 🤝 Let's Connect
+The dual-mode feature (professional consultant vs. D&D dungeon master) demonstrates contextual AI flexibility and makes the portfolio shareable. People remember "the AI portfolio that runs D&D campaigns" more than another resume website.
 
-This is a **tech demo, portfolio, and open-source project** rolled into one.
+This project embodies my philosophy: the best leaders never stop coding. Managing enterprise platforms doesn't preclude hands-on technical work—it demands it.
 
-- 🌐 **Portfolio:** [ai-portfolio-hazel-nine.vercel.app](https://ai-portfolio-hazel-nine.vercel.app)
-- 💼 **LinkedIn:** [linkedin.com/in/zacharysluss](https://linkedin.com/in/zacharysluss)
-- 📧 **Email:** [zacsluss@yahoo.com](mailto:zacsluss@yahoo.com)
-- 🐙 **GitHub:** [github.com/Zacsluss](https://github.com/Zacsluss)
+## Professional Background
 
----
+**Enterprise Salesforce Architecture:** 7 years leading implementations for Fortune 500 clients in financial services, healthcare, and manufacturing. Architected solutions deployed across 22 countries involving complex integrations, large-scale data migrations, and custom Lightning components.
 
-## 📝 License
+**Certifications:** Salesforce Administrator, Platform App Builder
 
-**MIT License** — Use it, modify it, make it yours. Just don't claim you built ZARVIS before I did. 😄
+**Technical Expertise:** Full-stack development, AI integration, cloud architecture, CRM systems design, API development, database optimization
 
-If you build something cool with this, I'd love to see it! Drop me a message.
+**Creative Skills:** FAA-licensed commercial drone pilot, digital art (Adobe Creative Suite), music production (Ableton, Logic Pro)
 
----
+## Contributing
 
-## ⚡ Why This Exists
-
-**Traditional portfolios are boring.** PDFs get skimmed. Static sites get skipped.
-
-I wanted to show what I can build while also making it easy for recruiters, hiring managers, and curious developers to learn about my work. So I built an AI that knows my entire career and can have real conversations.
-
-It's a portfolio. It's a tech demo. It's open source. It's a conversation starter.
-
-**And yes, it can be your dungeon master.** 🎲
+This project is open source under the MIT License. Fork it, modify it, use it for your own portfolio. If you build something interesting with it, I'd love to see it.
 
 ---
 
 <div align="center">
 
-### 🚀 Ready to Talk to ZARVIS?
+**Built by [Zachary Sluss](https://github.com/Zacsluss)** • MIT License
 
-[![Launch Portfolio Now](https://img.shields.io/badge/→_LAUNCH_PORTFOLIO_NOW-2d7a3e?style=for-the-badge&logoColor=white)](https://ai-portfolio-hazel-nine.vercel.app)
+**Connect:** [LinkedIn](https://linkedin.com/in/zacharysluss) • [Email](mailto:zacsluss@yahoo.com)
 
-*Built with [Claude Code](https://claude.com/claude-code) | Powered by OpenAI GPT-4o | Hosted on Vercel*
+[![GitHub stars](https://img.shields.io/github/stars/Zacsluss/portfolioai?style=social)](https://github.com/Zacsluss/portfolioai/stargazers)
 
 </div>
