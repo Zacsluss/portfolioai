@@ -1,12 +1,12 @@
 <div align="center">
 
 <!-- Hero Header -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,12,20&height=180&section=header&text=AI-Powered%20Portfolio&fontSize=60&fontColor=FFFFFF&animation=twinkling&fontAlignY=30&desc=Your%20Resume,%20But%20It%20Talks%20Back&descSize=18&descAlignY=55"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,12,20&height=200&section=header&text=Zachary%20Sluss&fontSize=70&fontColor=FFFFFF&animation=twinkling&fontAlignY=25&desc=Enterprise%20Technology%20Leader%20%7C%20Lead%20CRM%20Systems%20Analyst&descSize=20&descAlignY=50&descAlign=50"/>
 
 <br/>
 
 <!-- Animated Subtitle -->
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=2d9a5e&center=true&vCenter=true&random=false&width=700&lines=GPT-4o+%E2%80%A2+Whisper+API+%E2%80%A2+Next.js+14;Conversational+Career+Assistant+(ZARVIS);TypeScript+%E2%80%A2+Vercel+%E2%80%A2+Framer+Motion" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=2d9a5e&center=true&vCenter=true&random=false&width=750&lines=%245M%2B+Platforms+%E2%80%A2+3K+Users+%E2%80%A2+22+Countries;AI-Enabled+Portfolio+%E2%80%A2+GPT-4o+%2B+Whisper;AWS+%26+Tableau+Certified+%E2%80%A2+Seeking+Director%2FVP;Multi-Passionate+%E2%80%A2+Always+Learning+%E2%80%A2+Never+Settling" alt="Typing SVG" />
 
 <br/>
 
@@ -36,7 +36,7 @@
 
 ## 🎯 What This Is
 
-**An AI-powered portfolio that replaces static career documents with a conversational assistant named ZARVIS.** Instead of reading bullet points, visitors engage in natural dialogue about 7 years of enterprise Salesforce architecture across 22 countries. Ask about specific projects, technical decisions, or certifications—ZARVIS understands context and provides detailed responses.
+**My interactive portfolio powered by AI—featuring ZARVIS, a conversational assistant that knows my entire career history.** Unlike traditional portfolios, this one leverages GPT-4o and Whisper API to enable natural dialogue about my 7 years of enterprise Salesforce architecture across 22 countries. Ask about specific projects, technical decisions, or certifications—ZARVIS understands context and provides detailed responses. **AI isn't just mentioned here, it's the core feature that makes this portfolio memorable and functional.**
 
 <div align="center">
 
