@@ -47,9 +47,31 @@
 + TypeScript 5.3 strict mode (zero ESLint warnings)
 + Sub-1-second page loads
 + Vercel serverless deployment
+! RECENTLY UPDATED: Enhanced error handling, security hardening, API v6.7.0
 ```
 
 </div>
+
+<br/>
+
+### 🔥 Recent Updates (2025)
+
+<table>
+<tr>
+<td width="33%" align="center">
+<b>🛡️ Enhanced Security</b><br/>
+<sub>API key validation, format checking, secure error handling, protected environment variables</sub>
+</td>
+<td width="33%" align="center">
+<b>🔧 Production-Ready</b><br/>
+<sub>Comprehensive error messages, OpenAI API v6.7.0, rate limiting, quota detection</sub>
+</td>
+<td width="33%" align="center">
+<b>📚 Documentation</b><br/>
+<sub>Security best practices guide, detailed fix summary, troubleshooting docs</sub>
+</td>
+</tr>
+</table>
 
 <br/>
 
@@ -210,12 +232,13 @@ One-click deployment
 
 ### ⚡ AI Integration
 
-- **GPT-4o** - Conversational responses
+- **GPT-4o (v6.7.0)** - Latest OpenAI conversational model
 - **Whisper API** - Voice transcription
 - **Streaming** - Real-time responses
 - **Context** - Multi-turn conversations
 - **Custom prompts** - Career-specific training
-- **Error handling** - Network timeouts, failures
+- **Production error handling** - API key validation, rate limits, quota detection, 401/429/500 errors
+- **Security** - Server-side key protection, input sanitization, CSP headers
 
 </td>
 </tr>
@@ -240,6 +263,51 @@ Static PDFs get skimmed. Static websites get skipped. An AI assistant that can d
 **The dual-mode feature (professional consultant vs. D&D dungeon master) demonstrates contextual AI flexibility and makes the portfolio shareable.** People remember "the AI portfolio that runs D&D campaigns" more than another resume website.
 
 **This project embodies my philosophy: the best leaders never stop coding.** Managing enterprise platforms doesn't preclude hands-on technical work—it demands it.
+
+---
+
+## 🔒 Production-Ready Features
+
+**This isn't a proof-of-concept—it's production-grade code designed for real-world deployment.**
+
+<table>
+<tr>
+<td width="50%">
+
+### 🛡️ Security & Reliability
+
+- **Environment variable validation** - API key format checking, missing key detection
+- **Comprehensive error handling** - Specific responses for 401, 429, 500, quota errors
+- **Rate limiting** - 10 requests/minute per IP (configurable)
+- **Input sanitization** - XSS prevention, length limits, control character filtering
+- **CSP headers** - Strict Content Security Policy, frame protection
+- **CORS configuration** - API route protection
+- **Secure key storage** - Server-side only, never exposed to client
+- **Git security** - `.env.local` properly excluded, never committed
+
+</td>
+<td width="50%">
+
+### 📊 Monitoring & Operations
+
+- **Detailed error logging** - Console output for debugging
+- **User-friendly error messages** - Clear actionable feedback
+- **OpenAI API v6.7.0** - Latest stable version
+- **Quota detection** - Billing/limit warnings
+- **Rate limit headers** - X-RateLimit-Remaining tracking
+- **Build verification** - TypeScript strict mode, zero lint warnings
+- **Documentation** - [SECURITY_RECOMMENDATIONS.md](SECURITY_RECOMMENDATIONS.md), [FIX_SUMMARY.md](FIX_SUMMARY.md)
+- **Cost optimization** - ~$15-25/month operational costs
+
+</td>
+</tr>
+</table>
+
+### 📄 Additional Documentation
+
+- **[SECURITY_RECOMMENDATIONS.md](SECURITY_RECOMMENDATIONS.md)** - API key security, rotation procedures, best practices
+- **[FIX_SUMMARY.md](FIX_SUMMARY.md)** - Complete troubleshooting guide, fix history, deployment checklist
+- **[CONTRIBUTING.md](CONTRIBUTING.md)** - Contribution guidelines, coding standards, PR process
 
 ---
 
