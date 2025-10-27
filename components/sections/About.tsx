@@ -75,8 +75,20 @@ export function About() {
               initial={{ opacity: 0, x: -50 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="space-y-4"
+              className="space-y-6"
             >
+              {/* Headshot */}
+              <div className="flex justify-center md:justify-start mb-6">
+                <div className="relative group">
+                  <div className="absolute -inset-1 bg-gradient-to-r from-accent-400 to-accent-600 rounded-full opacity-75 group-hover:opacity-100 blur transition duration-300"></div>
+                  <img
+                    src="/headshot.jpeg"
+                    alt="Zachary Sluss"
+                    className="relative w-48 h-48 rounded-full object-cover border-4 border-gray-800 shadow-2xl"
+                  />
+                </div>
+              </div>
+
               <p className="text-gray-300 text-lg leading-relaxed">
                 {personal.bio}
               </p>

@@ -33,6 +33,17 @@
 <br/>
 
 ---
+## 🎬 How It Looks
+
+<div align="center">
+
+![Portfolio AI Demo](public/profileai.gif)
+
+*Experience ZARVIS in action - AI-powered career conversations that go beyond the resume*
+
+</div>
+
+---
 
 ## 🎯 What This Is
 
