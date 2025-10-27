@@ -1,9 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
 import OpenAI from 'openai';
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+// Initialize OpenAI client lazily to avoid build-time errors
+function getOpenAIClient() {
+  return new OpenAI({
+    apiKey: process.env.OPENAI_API_KEY || 'dummy-key-for-build',
+  });
+}
 
 export async function POST(req: NextRequest) {
   try {
@@ -17,6 +20,24 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    // Validate file size (max 25MB for Whisper API)
+    const maxSize = 25 * 1024 * 1024; // 25MB
+    if (audioFile.size > maxSize) {
+      return NextResponse.json(
+        { error: 'Audio file too large. Maximum size is 25MB.' },
+        { status: 400 }
+      );
+    }
+
+    // Validate file type
+    const allowedTypes = ['audio/webm', 'audio/mp4', 'audio/mpeg', 'audio/wav', 'audio/ogg'];
+    if (!allowedTypes.includes(audioFile.type)) {
+      return NextResponse.json(
+        { error: 'Invalid audio format. Supported: webm, mp4, mpeg, wav, ogg' },
+        { status: 400 }
+      );
+    }
+
     // Validate API key
     if (!process.env.OPENAI_API_KEY) {
       console.error('OPENAI_API_KEY is not set');
@@ -25,6 +46,9 @@ export async function POST(req: NextRequest) {
         { status: 503 }
       );
     }
+
+    // Get OpenAI client
+    const openai = getOpenAIClient();
 
     // Transcribe audio using Whisper
     const transcription = await openai.audio.transcriptions.create({

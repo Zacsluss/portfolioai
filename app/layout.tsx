@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
 import { Inter, Space_Mono } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/react';
 import './globals.css';
 import { portfolioData } from '@/lib/portfolio-data';
+import { ErrorBoundary } from '@/components/ErrorBoundary';
 import dynamic from 'next/dynamic';
 
 const MagneticCursor = dynamic(() => import('@/components/effects/MagneticCursor').then(mod => ({ default: mod.MagneticCursor })), {
@@ -26,14 +28,19 @@ export const metadata: Metadata = {
   title: `${portfolioData.personal.name} - ${portfolioData.personal.title}`,
   description: portfolioData.personal.tagline,
   keywords: [
-    'portfolio',
-    'developer',
-    'software engineer',
-    'web development',
-    'AI',
+    'Zachary Sluss',
+    'Enterprise Technology Leader',
+    'CRM Systems Analyst',
+    'Salesforce Expert',
+    'Digital Transformation',
+    'Lead CRM Analyst',
+    'Fortune 500',
+    'AI Portfolio',
     'React',
     'Next.js',
     'TypeScript',
+    'OpenAI',
+    'Enterprise Architecture',
   ],
   authors: [{ name: portfolioData.personal.name }],
   creator: portfolioData.personal.name,
@@ -62,8 +69,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${spaceMono.variable}`}>
       <body className="antialiased">
-        <MagneticCursor />
-        {children}
+        <ErrorBoundary>
+          <MagneticCursor />
+          {children}
+          <Analytics />
+        </ErrorBoundary>
       </body>
     </html>
   );

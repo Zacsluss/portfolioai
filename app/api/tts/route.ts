@@ -2,9 +2,12 @@ import { NextRequest, NextResponse } from 'next/server';
 import OpenAI from 'openai';
 import { assistantConfig } from '@/lib/assistant-context';
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+// Initialize OpenAI client lazily to avoid build-time errors
+function getOpenAIClient() {
+  return new OpenAI({
+    apiKey: process.env.OPENAI_API_KEY || 'dummy-key-for-build',
+  });
+}
 
 export async function POST(req: NextRequest) {
   try {
@@ -25,6 +28,9 @@ export async function POST(req: NextRequest) {
         { status: 503 }
       );
     }
+
+    // Get OpenAI client
+    const openai = getOpenAIClient();
 
     // Generate speech using OpenAI TTS
     const mp3 = await openai.audio.speech.create({

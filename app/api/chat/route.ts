@@ -1,10 +1,34 @@
 import { NextRequest, NextResponse } from 'next/server';
 import OpenAI from 'openai';
+import type { ChatCompletionMessageParam } from 'openai/resources/chat/completions';
 import { generateSystemPrompt, assistantConfig } from '@/lib/assistant-context';
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+// Initialize OpenAI client lazily to avoid build-time errors
+function getOpenAIClient() {
+  return new OpenAI({
+    apiKey: process.env.OPENAI_API_KEY || 'dummy-key-for-build',
+  });
+}
+
+/**
+ * Sanitize user input to prevent injection attacks
+ * Removes potentially dangerous characters and limits length
+ */
+function sanitizeInput(text: string): string {
+  if (!text || typeof text !== 'string') return '';
+
+  // Limit length to prevent abuse
+  const maxLength = 2000;
+  let sanitized = text.slice(0, maxLength);
+
+  // Remove null bytes and other control characters
+  sanitized = sanitized.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/g, '');
+
+  // Trim whitespace
+  sanitized = sanitized.trim();
+
+  return sanitized;
+}
 
 // Simple in-memory rate limiting (use Redis in production)
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
@@ -57,6 +81,25 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    // Validate and sanitize messages
+    if (messages.length === 0 || messages.length > 50) {
+      return NextResponse.json(
+        { error: 'Invalid message count' },
+        { status: 400 }
+      );
+    }
+
+    // Sanitize all message content
+    const sanitizedMessages: ChatCompletionMessageParam[] = messages
+      .map((msg: { role?: string; content?: string }) => {
+        const role = (msg.role === 'user' || msg.role === 'assistant' ? msg.role : 'user') as 'user' | 'assistant';
+        return {
+          role,
+          content: sanitizeInput(msg.content || ''),
+        };
+      })
+      .filter((msg) => msg.content.length > 0);
+
     // Validate API key
     if (!process.env.OPENAI_API_KEY) {
       console.error('OPENAI_API_KEY is not set');
@@ -69,12 +112,15 @@ export async function POST(req: NextRequest) {
     // Generate system prompt with portfolio context
     const systemPrompt = generateSystemPrompt();
 
+    // Get OpenAI client
+    const openai = getOpenAIClient();
+
     // Call OpenAI API with streaming
     const response = await openai.chat.completions.create({
       model: assistantConfig.model,
       messages: [
         { role: 'system', content: systemPrompt },
-        ...messages,
+        ...sanitizedMessages,
       ],
       temperature: assistantConfig.temperature,
       max_tokens: assistantConfig.maxTokens,
