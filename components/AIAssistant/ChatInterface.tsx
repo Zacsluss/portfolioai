@@ -146,7 +146,7 @@ export function ChatInterface() {
               <div
                 className={`max-w-[80%] rounded-lg px-4 py-2 ${
                   message.role === 'user'
-                    ? 'bg-matrix-500 text-black font-medium'
+                    ? 'bg-matrix-500 text-white font-medium'
                     : 'bg-gray-800/80 text-gray-100 border border-gray-700/50'
                 }`}
               >
