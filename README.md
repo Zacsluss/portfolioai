@@ -465,7 +465,7 @@ I'm into AI/ML integration, full-stack development, enterprise architecture, Web
 
 <br/>
 
-[Resume (PDF)](public/resume.pdf)
+[Download Resume](public/resume.pdf)
 
 <br/>
 
