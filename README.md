@@ -462,10 +462,9 @@ I'm into AI/ML integration, full-stack development, enterprise architecture, Web
 <a href="mailto:zacsluss@yahoo.com">
   <img src="https://img.shields.io/badge/Email-zacsluss@yahoo.com-b91c1c?style=for-the-badge&logo=gmail&logoColor=white"/>
 </a>
-
-<br/>
-
-[Download Resume](public/resume.pdf)
+<a href="public/resume.pdf">
+  <img src="https://img.shields.io/badge/Download-Resume-7c3aed?style=for-the-badge&logo=files&logoColor=white"/>
+</a>
 
 <br/>
 
