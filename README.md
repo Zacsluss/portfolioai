@@ -130,19 +130,19 @@
 
 <table>
 <tr>
-<td width="50%">
+<td width="50%" align="center">
 
 ### 🤖 AI Features
 
-- **Conversational Intelligence** - GPT-4o trained on complete career history
-- **Voice Transcription** - Whisper API for natural voice input
-- **Context Management** - Multi-turn conversation handling
-- **Dual Mode** - Professional consultant OR D&D dungeon master
-- **Streaming Responses** - Real-time perceived performance
-- **Custom Prompts** - Tailored to career specifics
+**Conversational Intelligence** - GPT-4o trained on complete career history<br/>
+**Voice Transcription** - Whisper API for natural voice input<br/>
+**Context Management** - Multi-turn conversation handling<br/>
+**Dual Mode** - Professional consultant OR D&D dungeon master<br/>
+**Streaming Responses** - Real-time perceived performance<br/>
+**Custom Prompts** - Tailored to career specifics
 
 </td>
-<td width="50%">
+<td width="50%" align="center">
 
 ### 📈 The Numbers
 
@@ -239,31 +239,31 @@ One-click deployment
 
 <table>
 <tr>
-<td width="50%">
+<td width="50%" align="center">
 
 ### 🏗️ Architecture
 
 **Modern web stack** with:
 
-- Next.js 14 App Router
-- TypeScript 5.3 strict mode
-- Server-side API routes (protect keys)
-- Zustand state management
-- Tailwind CSS + Framer Motion
-- Vercel serverless functions
+Next.js 14 App Router<br/>
+TypeScript 5.3 strict mode<br/>
+Server-side API routes (protect keys)<br/>
+Zustand state management<br/>
+Tailwind CSS + Framer Motion<br/>
+Vercel serverless functions
 
 </td>
-<td width="50%">
+<td width="50%" align="center">
 
 ### ⚡ AI Integration
 
-- **GPT-4o (v6.7.0)** - Latest OpenAI conversational model
-- **Whisper API** - Voice transcription
-- **Streaming** - Real-time responses
-- **Context** - Multi-turn conversations
-- **Custom prompts** - Career-specific training
-- **Production error handling** - API key validation, rate limits, quota detection, 401/429/500 errors
-- **Security** - Server-side key protection, input sanitization, CSP headers
+**GPT-4o (v6.7.0)** - Latest OpenAI conversational model<br/>
+**Whisper API** - Voice transcription<br/>
+**Streaming** - Real-time responses<br/>
+**Context** - Multi-turn conversations<br/>
+**Custom prompts** - Career-specific training<br/>
+**Production error handling** - API key validation, rate limits, quota detection, 401/429/500 errors<br/>
+**Security** - Server-side key protection, input sanitization, CSP headers
 
 </td>
 </tr>
@@ -301,32 +301,32 @@ Static PDFs get skimmed. Static websites get skipped. An AI assistant that can d
 
 <table>
 <tr>
-<td width="50%">
+<td width="50%" align="center">
 
 ### 🛡️ Security & Reliability
 
-- **Environment variable validation** - API key format checking, missing key detection
-- **Comprehensive error handling** - Specific responses for 401, 429, 500, quota errors
-- **Rate limiting** - 10 requests/minute per IP (configurable)
-- **Input sanitization** - XSS prevention, length limits, control character filtering
-- **CSP headers** - Strict Content Security Policy, frame protection
-- **CORS configuration** - API route protection
-- **Secure key storage** - Server-side only, never exposed to client
-- **Git security** - `.env.local` properly excluded, never committed
+**Environment variable validation** - API key format checking, missing key detection<br/>
+**Comprehensive error handling** - Specific responses for 401, 429, 500, quota errors<br/>
+**Rate limiting** - 10 requests/minute per IP (configurable)<br/>
+**Input sanitization** - XSS prevention, length limits, control character filtering<br/>
+**CSP headers** - Strict Content Security Policy, frame protection<br/>
+**CORS configuration** - API route protection<br/>
+**Secure key storage** - Server-side only, never exposed to client<br/>
+**Git security** - `.env.local` properly excluded, never committed
 
 </td>
-<td width="50%">
+<td width="50%" align="center">
 
 ### 📊 Monitoring & Operations
 
-- **Detailed error logging** - Console output for debugging
-- **User-friendly error messages** - Clear actionable feedback
-- **OpenAI API v6.7.0** - Latest stable version
-- **Quota detection** - Billing/limit warnings
-- **Rate limit headers** - X-RateLimit-Remaining tracking
-- **Build verification** - TypeScript strict mode, zero lint warnings
-- **Documentation** - [SECURITY_RECOMMENDATIONS.md](SECURITY_RECOMMENDATIONS.md), [FIX_SUMMARY.md](FIX_SUMMARY.md)
-- **Cost optimization** - ~$15-25/month operational costs
+**Detailed error logging** - Console output for debugging<br/>
+**User-friendly error messages** - Clear actionable feedback<br/>
+**OpenAI API v6.7.0** - Latest stable version<br/>
+**Quota detection** - Billing/limit warnings<br/>
+**Rate limit headers** - X-RateLimit-Remaining tracking<br/>
+**Build verification** - TypeScript strict mode, zero lint warnings<br/>
+**Documentation** - [SECURITY_RECOMMENDATIONS.md](SECURITY_RECOMMENDATIONS.md), [FIX_SUMMARY.md](FIX_SUMMARY.md)<br/>
+**Cost optimization** - ~$15-25/month operational costs
 
 </td>
 </tr>
