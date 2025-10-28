@@ -115,7 +115,7 @@ describe('Logger', () => {
 
     it('should log error level messages', () => {
       logger.log('error', 'Error via log')
-      expect(consoleSpy.error).toHaveBeenCalledWith('[ERROR]', 'Error via log', undefined, '')
+      expect(consoleSpy.error).toHaveBeenCalledWith('[ERROR]', 'Error via log', '', '')
     })
 
     it('should log debug level messages', () => {

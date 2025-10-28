@@ -10,10 +10,10 @@ interface LogContext {
 }
 
 class Logger {
-  private isDevelopment = process.env.NODE_ENV === 'development';
+  private isDevelopment = process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test';
 
   /**
-   * Log informational messages (development only)
+   * Log informational messages (development/test only)
    */
   info(message: string, context?: LogContext): void {
     if (this.isDevelopment) {
@@ -36,7 +36,7 @@ class Logger {
   }
 
   /**
-   * Log debug messages (development only)
+   * Log debug messages (development/test only)
    */
   debug(message: string, context?: LogContext): void {
     if (this.isDevelopment) {
