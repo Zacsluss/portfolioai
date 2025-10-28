@@ -13,10 +13,10 @@
 <!-- Main Action Buttons -->
 <p align="center">
   <a href="https://ai-portfolio-hazel-nine.vercel.app">
-    <img src="https://img.shields.io/badge/🤖_TALK-TO_ZARVIS-2d7a3e?style=for-the-badge&labelColor=000000&logo=openai&logoColor=white" alt="Try Demo"/>
+    <img src="https://img.shields.io/badge/🤖_TALK-TO_ZARVIS-2e8b57?style=for-the-badge&labelColor=000000&logo=openai&logoColor=white" alt="Try Demo"/>
   </a>
   <a href="https://github.com/Zacsluss/portfolioai/archive/refs/heads/main.zip">
-    <img src="https://img.shields.io/badge/⬇️_FORK-THIS_TEMPLATE-d97706?style=for-the-badge&labelColor=000000&logo=github&logoColor=white" alt="Download"/>
+    <img src="https://img.shields.io/badge/⬇️_DOWNLOAD-TEMPLATE-d97706?style=for-the-badge&labelColor=000000&logo=github&logoColor=white" alt="Download"/>
   </a>
 </p>
 
@@ -25,7 +25,7 @@
   <img src="https://img.shields.io/github/stars/Zacsluss/portfolioai?style=social" alt="Stars"/>
   <img src="https://img.shields.io/github/forks/Zacsluss/portfolioai?style=social" alt="Forks"/>
   <img src="https://img.shields.io/github/watchers/Zacsluss/portfolioai?style=social" alt="Watchers"/>
-  <img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="License"/>
+  <img src="https://img.shields.io/github/license/Zacsluss/portfolioai?style=flat-square&color=555555" alt="License"/>
   <img src="https://img.shields.io/github/last-commit/Zacsluss/portfolioai?style=flat-square&color=666666" alt="Last Commit"/>
 </p>
 
@@ -451,7 +451,7 @@ I'm into AI/ML integration, full-stack development, enterprise architecture, Web
 <div align="center">
 
 <a href="https://ai-portfolio-hazel-nine.vercel.app">
-  <img src="https://img.shields.io/badge/Portfolio-AI_Demo-2d7a3e?style=for-the-badge&logo=vercel&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Portfolio-AI_Demo-2e7d5a?style=for-the-badge&logo=vercel&logoColor=white"/>
 </a>
 <a href="https://github.com/Zacsluss">
   <img src="https://img.shields.io/badge/GitHub-@Zacsluss-181717?style=for-the-badge&logo=github&logoColor=white"/>
@@ -463,7 +463,7 @@ I'm into AI/ML integration, full-stack development, enterprise architecture, Web
   <img src="https://img.shields.io/badge/Email-zacsluss@yahoo.com-b91c1c?style=for-the-badge&logo=gmail&logoColor=white"/>
 </a>
 <a href="public/resume.pdf">
-  <img src="https://img.shields.io/badge/Download-Resume-7c3aed?style=for-the-badge&logo=files&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Resume-Download_Resume-7c3aed?style=for-the-badge&logo=adobeacrobatreader&logoColor=white"/>
 </a>
 
 <br/>
