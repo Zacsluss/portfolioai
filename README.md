@@ -16,7 +16,7 @@
     <img src="https://img.shields.io/badge/🤖_TALK-TO_ZARVIS-2d7a3e?style=for-the-badge&labelColor=000000&logo=openai&logoColor=white" alt="Try Demo"/>
   </a>
   <a href="https://github.com/Zacsluss/portfolioai/archive/refs/heads/main.zip">
-    <img src="https://img.shields.io/badge/⬇️_DOWNLOAD-ZIP-0366d6?style=for-the-badge&labelColor=000000&logo=download&logoColor=white" alt="Download"/>
+    <img src="https://img.shields.io/badge/⬇️_FORK-THIS_TEMPLATE-d97706?style=for-the-badge&labelColor=000000&logo=github&logoColor=white" alt="Download"/>
   </a>
 </p>
 
@@ -24,6 +24,7 @@
 <p align="center">
   <img src="https://img.shields.io/github/stars/Zacsluss/portfolioai?style=social" alt="Stars"/>
   <img src="https://img.shields.io/github/forks/Zacsluss/portfolioai?style=social" alt="Forks"/>
+  <img src="https://img.shields.io/github/watchers/Zacsluss/portfolioai?style=social" alt="Watchers"/>
   <img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="License"/>
   <img src="https://img.shields.io/github/last-commit/Zacsluss/portfolioai?style=flat-square&color=666666" alt="Last Commit"/>
 </p>
@@ -33,7 +34,18 @@
 <br/>
 
 ---
-## 🎬 How It Looks
+
+## 👋 Hey, I'm Zac
+
+I manage enterprise platforms by day and build AI-powered projects by night. This portfolio features **ZARVIS, a conversational AI assistant** trained on my entire career history—powered by GPT-4o and Whisper API.
+
+**What makes it interesting:**
+- Talk to an AI that knows my 7 years of Salesforce architecture across 22 countries
+- Voice or text input with Whisper API transcription
+- Production-grade Next.js 14 with streaming responses
+- Dual mode: Professional consultant OR D&D dungeon master
+
+Built with Next.js, TypeScript, and OpenAI's latest APIs!
 
 <div align="center">
 
@@ -45,86 +57,108 @@
 
 ---
 
-## 🎯 What This Is
-
-**My interactive portfolio powered by AI—featuring ZARVIS, a conversational assistant that knows my entire career history.** Unlike traditional portfolios, this one leverages GPT-4o and Whisper API to enable natural dialogue about my 7 years of enterprise Salesforce architecture across 22 countries. Ask about specific projects, technical decisions, or certifications—ZARVIS understands context and provides detailed responses. **AI isn't just mentioned here, it's the core feature that makes this portfolio memorable and functional.**
+## ⚡ What This Does
 
 <div align="center">
 
-```diff
-+ GPT-4o conversational intelligence
-+ Whisper API voice transcription
-+ Next.js 14 with App Router
-+ TypeScript 5.3 strict mode (zero ESLint warnings)
-+ Sub-1-second page loads
-+ Vercel serverless deployment
-! RECENTLY UPDATED: Enhanced error handling, security hardening, API v6.7.0
-```
+**AI-powered portfolio conversations** • **GPT-4o + Whisper API** • **Next.js 14** • **Production-ready**
 
 </div>
 
-<br/>
+**Key Features:**
+- 🤖 Talk to ZARVIS about my career, projects, and technical decisions
+- 🎙️ Voice transcription with Whisper API for natural conversations
+- 💬 Multi-turn context management remembers conversation history
+- 🎮 Dual mode: Professional consultant OR fun D&D dungeon master
 
-### 🔥 Recent Updates (2025)
-
-<div align="center">
-
-<table>
-<tr>
-<td width="33%" align="center">
-<b>🛡️ Enhanced Security</b><br/>
-<sub>API key validation, format checking, secure error handling, protected environment variables</sub>
-</td>
-<td width="33%" align="center">
-<b>🔧 Production-Ready</b><br/>
-<sub>Comprehensive error messages, OpenAI API v6.7.0, rate limiting, quota detection</sub>
-</td>
-<td width="33%" align="center">
-<b>📚 Documentation</b><br/>
-<sub>Security best practices guide, detailed fix summary, troubleshooting docs</sub>
-</td>
-</tr>
-</table>
-
-</div>
-
-<br/>
-
-<div align="center">
-
-<!-- Performance Metrics -->
-<table>
-  <tr>
-    <td align="center">
-      <img src="https://img.shields.io/badge/AI-GPT--4o-2d7a3e?style=flat-square&logo=openai&logoColor=white"/><br/>
-      <sub><b>Conversation</b></sub>
-    </td>
-    <td align="center">
-      <img src="https://img.shields.io/badge/Voice-Whisper_API-1E4A6D?style=flat-square&logo=microphone&logoColor=white"/><br/>
-      <sub><b>Transcription</b></sub>
-    </td>
-    <td align="center">
-      <img src="https://img.shields.io/badge/Framework-Next.js_14-8B3A3A?style=flat-square&logo=nextdotjs&logoColor=white"/><br/>
-      <sub><b>Web Stack</b></sub>
-    </td>
-    <td align="center">
-      <img src="https://img.shields.io/badge/Load-<1s-8B6914?style=flat-square&logo=speedtest&logoColor=white"/><br/>
-      <sub><b>Page Speed</b></sub>
-    </td>
-  </tr>
-</table>
-
-</div>
-
-<div align="center">
-<img width="800" src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=6,12,20&height=2"/>
-</div>
+**Tech:** Next.js 14 • TypeScript 5.3 • GPT-4o • Whisper API • Vercel
 
 ---
 
-## 💡 The Technical Challenge
+## 📚 Table of Contents
 
-**Integrating GPT-4o into a production-grade portfolio that serves as both a demonstration of AI integration capabilities and a functional career showcase.** The result is a Next.js 14 application with server-side API routes protecting sensitive keys, streaming responses for optimal perceived performance, and Whisper API integration for real-time voice transcription.
+<details>
+<summary><b>Jump to a section</b></summary>
+
+- [🛠️ Tech Stack](#️-tech-stack)
+- [🤖 AI Features](#-ai-features)
+- [📊 Performance & Stats](#-performance--stats)
+- [🚀 Quick Start](#-quick-start)
+- [🔒 Production Features](#-production-features)
+- [📄 License & Usage](#-license--usage)
+- [📬 About & Connect](#-about--connect)
+
+</details>
+
+---
+
+## 🛠️ Tech Stack
+
+<div align="center">
+
+### What I Used to Build This
+
+<img src="https://skillicons.dev/icons?i=nextjs,typescript,vercel,react,tailwind,nodejs" alt="Tech Stack" />
+
+### Core Dependencies
+
+<table>
+<tr>
+<td align="center" width="25%">
+<img src="https://img.shields.io/badge/Next.js-14-000000?style=flat-square&logo=nextdotjs&logoColor=white"/><br/>
+<sub><b>Framework</b></sub>
+</td>
+<td align="center" width="25%">
+<img src="https://img.shields.io/badge/TypeScript-5.3-1E4A6D?style=flat-square&logo=typescript&logoColor=white"/><br/>
+<sub><b>Language</b></sub>
+</td>
+<td align="center" width="25%">
+<img src="https://img.shields.io/badge/GPT--4o-v6.7.0-412991?style=flat-square&logo=openai&logoColor=white"/><br/>
+<sub><b>AI Model</b></sub>
+</td>
+<td align="center" width="25%">
+<img src="https://img.shields.io/badge/Whisper-API-2d7a3e?style=flat-square&logo=openai&logoColor=white"/><br/>
+<sub><b>Voice</b></sub>
+</td>
+</tr>
+</table>
+
+</div>
+
+<details>
+<summary><b>📦 See the full tech details</b></summary>
+
+**Why this stack?**
+
+- **Next.js 14** - App Router with server-side API routes (protects API keys)
+- **TypeScript 5.3** - Strict mode with zero ESLint warnings
+- **OpenAI GPT-4o** - Latest conversational model for nuanced responses
+- **Whisper API** - Real-time voice transcription
+- **Zustand** - Lightweight state management
+- **Tailwind CSS** - Fast styling with Framer Motion animations
+- **Vercel** - Serverless deployment with edge functions
+
+**Architecture:**
+```
+Next.js 14 App Router
+├── /app/api/* - Server-side API routes (protect keys)
+├── /lib/* - Career data & AI context
+├── /components/* - React components
+└── Vercel Serverless Functions
+```
+
+</details>
+
+---
+
+## 🤖 AI Features
+
+**This isn't just a portfolio—it's an AI-powered conversation about my career.**
+
+<details>
+<summary><b>🧠 See all AI capabilities</b></summary>
+
+<br/>
 
 <div align="center">
 
@@ -132,35 +166,106 @@
 <tr>
 <td width="50%" align="center">
 
-### 🤖 AI Features
+### 💬 Conversational Intelligence
 
-**Conversational Intelligence** - GPT-4o trained on complete career history<br/>
-**Voice Transcription** - Whisper API for natural voice input<br/>
-**Context Management** - Multi-turn conversation handling<br/>
-**Dual Mode** - Professional consultant OR D&D dungeon master<br/>
-**Streaming Responses** - Real-time perceived performance<br/>
-**Custom Prompts** - Tailored to career specifics
+**GPT-4o trained on complete career history**<br/>
+Knows every project, certification, and technical decision<br/>
+<br/>
+**Multi-turn conversation handling**<br/>
+Remembers context across the entire chat<br/>
+<br/>
+**Streaming responses**<br/>
+Real-time text generation for better UX<br/>
+<br/>
+**Custom prompts**<br/>
+Tailored to my specific background and personality
 
 </td>
 <td width="50%" align="center">
 
-### 📈 The Numbers
+### 🎙️ Voice & Input
 
-| Metric                  | Value                   |
-| :---------------------: | :---------------------: |
-| AI Model                | GPT-4o                  |
-| Voice API               | Whisper                 |
-| Framework               | Next.js 14              |
-| Language                | TypeScript 5.3          |
-| Page Load               | < 1 second              |
-| ESLint Warnings         | 0                       |
-| Cost                    | $5-20/month             |
+**Whisper API voice transcription**<br/>
+Natural voice input with high accuracy<br/>
+<br/>
+**Dual mode switching**<br/>
+Professional consultant OR D&D dungeon master<br/>
+<br/>
+**Error handling**<br/>
+API key validation, rate limits, quota detection<br/>
+<br/>
+**Security**<br/>
+Server-side key protection, input sanitization
 
 </td>
 </tr>
 </table>
 
 </div>
+
+**Every AI feature is production-ready with comprehensive error handling.**
+
+</details>
+
+---
+
+## 📊 Performance & Stats
+
+<div align="center">
+
+### Real numbers from production deployment
+
+<table align="center">
+<tr>
+<td width="50%">
+
+#### The Numbers
+<table>
+<tr><th align="center">Metric</th><th align="center">Value</th></tr>
+<tr><td align="center">AI Model</td><td align="center">GPT-4o</td></tr>
+<tr><td align="center">Voice API</td><td align="center">Whisper</td></tr>
+<tr><td align="center">Framework</td><td align="center">Next.js 14</td></tr>
+<tr><td align="center">Language</td><td align="center">TypeScript 5.3</td></tr>
+<tr><td align="center">Page Load</td><td align="center">< 1 second</td></tr>
+<tr><td align="center">ESLint Warnings</td><td align="center">0</td></tr>
+</table>
+
+</td>
+<td width="50%">
+
+#### Recent Updates (2025)
+<table>
+<tr><th align="center">Feature</th><th align="center">Status</th></tr>
+<tr><td align="center">Enhanced Security</td><td align="center">✅</td></tr>
+<tr><td align="center">API v6.7.0</td><td align="center">✅</td></tr>
+<tr><td align="center">Rate Limiting</td><td align="center">✅</td></tr>
+<tr><td align="center">Error Handling</td><td align="center">✅</td></tr>
+<tr><td align="center">Documentation</td><td align="center">✅</td></tr>
+<tr><td align="center">Cost: $5-20/mo</td><td align="center">💰</td></tr>
+</table>
+
+</td>
+</tr>
+</table>
+
+</div>
+
+<details>
+<summary><b>💡 The Technical Challenge</b></summary>
+
+<br/>
+
+**Integrating GPT-4o into a production-grade portfolio** that serves as both a demonstration of AI integration capabilities and a functional career showcase.
+
+**What I solved:**
+- ✅ Server-side API routes protect sensitive keys
+- ✅ Streaming responses for optimal perceived performance
+- ✅ Whisper API integration for voice transcription
+- ✅ Production error handling (401, 429, 500, quota errors)
+- ✅ Rate limiting and security hardening
+- ✅ Cost-effective deployment ($5-20/month)
+
+</details>
 
 ---
 
@@ -168,134 +273,59 @@
 
 <div align="center">
 
-<table>
-<tr>
-<td width="33%" align="center">
-
-### 🌐 Online
-
-**[Talk to ZARVIS](https://ai-portfolio-hazel-nine.vercel.app)**
-
-Instant access, no installation
-
-</td>
-<td width="33%" align="center">
-
-### 💻 Local
-
-```bash
-git clone <repo>
-npm install
-npm run dev
-```
-
-Add `OPENAI_API_KEY` to `.env.local`
-
-</td>
-<td width="33%" align="center">
-
-### 🚀 Deploy
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Zacsluss/portfolioai)
-
-One-click deployment
-
-</td>
-</tr>
-</table>
+### Want to try it locally? Takes about 30 seconds
 
 </div>
 
-<br/>
+```bash
+# 1️⃣ Clone this repo
+git clone https://github.com/Zacsluss/portfolioai.git
+cd portfolioai
+
+# 2️⃣ Install dependencies
+npm install
+
+# 3️⃣ Add your OpenAI API key
+echo "OPENAI_API_KEY=your-key-here" > .env.local
+
+# 4️⃣ Start dev server
+npm run dev
+# Opens at http://localhost:3000
+
+# 5️⃣ Deploy to Vercel
+vercel deploy
+```
 
 <details>
-<summary><b>🎨 Customization Guide</b></summary>
+<summary><b>🔧 How to customize it for yourself</b></summary>
 
-### To adapt this portfolio for your own use:
+<br/>
 
-1. **Edit Career Data:** Update `lib/portfolio-data.ts` with your professional history, skills, and projects
-2. **Train the AI:** Modify `lib/assistant-context.ts` with your background, experiences, and personality
-3. **Customize Styling:** Adjust Tailwind configuration and theme colors in `tailwind.config.js`
-4. **Add Features:** Extend API routes in `app/api/` for additional functionality
+**Make it yours (takes about 10 minutes):**
+
+1. **Your content**: Edit `lib/portfolio-data.ts` with your professional history, skills, and projects
+2. **Train the AI**: Modify `lib/assistant-context.ts` with your background, experiences, and personality
+3. **Customize styling**: Adjust Tailwind configuration and theme colors in `tailwind.config.js`
+4. **Add features**: Extend API routes in `app/api/` for additional functionality
+5. **Deploy**: Run `vercel deploy` and add your `OPENAI_API_KEY` to Vercel environment variables
+
+**Want to change the AI's personality?**
+- Open `lib/assistant-context.ts`
+- Modify the system prompt to match your style
+- Save and watch ZARVIS become uniquely yours ✨
 
 </details>
 
 ---
 
-## 🛠️ Technical Stack
-
-<div align="center">
-
-![Next.js](https://img.shields.io/badge/Next.js_14-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript_5.3-1E4A6D?style=for-the-badge&logo=typescript&logoColor=white)
-![OpenAI](https://img.shields.io/badge/GPT--4o-412991?style=for-the-badge&logo=openai&logoColor=white)
-![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
-
-</div>
-
-<br/>
-
-<div align="center">
-
-<table>
-<tr>
-<td width="50%" align="center">
-
-### 🏗️ Architecture
-
-**Modern web stack** with:
-
-Next.js 14 App Router<br/>
-TypeScript 5.3 strict mode<br/>
-Server-side API routes (protect keys)<br/>
-Zustand state management<br/>
-Tailwind CSS + Framer Motion<br/>
-Vercel serverless functions
-
-</td>
-<td width="50%" align="center">
-
-### ⚡ AI Integration
-
-**GPT-4o (v6.7.0)** - Latest OpenAI conversational model<br/>
-**Whisper API** - Voice transcription<br/>
-**Streaming** - Real-time responses<br/>
-**Context** - Multi-turn conversations<br/>
-**Custom prompts** - Career-specific training<br/>
-**Production error handling** - API key validation, rate limits, quota detection, 401/429/500 errors<br/>
-**Security** - Server-side key protection, input sanitization, CSP headers
-
-</td>
-</tr>
-</table>
-
-</div>
-
----
-
-## 💭 Why I Built This
-
-**As someone managing CRM platforms serving 3,000+ users across 22 countries, I built this to demonstrate AI integration capabilities while solving a practical problem: traditional portfolios are passive and forgettable.**
-
-Static PDFs get skimmed. Static websites get skipped. An AI assistant that can discuss my career in real-time creates memorable interactions with recruiters and hiring managers while simultaneously demonstrating:
-
-- ✅ **Full-stack development** - Next.js, TypeScript, API routes
-- ✅ **Production AI integration** - GPT-4o, Whisper, streaming
-- ✅ **Thoughtful design** - Server-side key protection, error handling, UX
-- ✅ **Deployment architecture** - Vercel serverless, edge functions
-- ✅ **Cost awareness** - $5-20/month operational costs
-
-**The constraint of public deployment forced robust architecture.** API keys must be protected server-side. Streaming responses must handle connection failures gracefully. Voice transcription needs error handling for network timeouts. These aren't academic exercises—they're production requirements.
-
-**The dual-mode feature (professional consultant vs. D&D dungeon master) demonstrates contextual AI flexibility and makes the portfolio shareable.** People remember "the AI portfolio that runs D&D campaigns" more than another resume website.
-
-**This project embodies my philosophy: the best leaders never stop coding.** Managing enterprise platforms doesn't preclude hands-on technical work—it demands it.
-
----
-
-## 🔒 Production-Ready Features
+## 🔒 Production Features
 
 **This isn't a proof-of-concept—it's production-grade code designed for real-world deployment.**
+
+<details>
+<summary><b>🛡️ See all security & reliability features</b></summary>
+
+<br/>
 
 <div align="center">
 
@@ -305,28 +335,46 @@ Static PDFs get skimmed. Static websites get skipped. An AI assistant that can d
 
 ### 🛡️ Security & Reliability
 
-**Environment variable validation** - API key format checking, missing key detection<br/>
-**Comprehensive error handling** - Specific responses for 401, 429, 500, quota errors<br/>
-**Rate limiting** - 10 requests/minute per IP (configurable)<br/>
-**Input sanitization** - XSS prevention, length limits, control character filtering<br/>
-**CSP headers** - Strict Content Security Policy, frame protection<br/>
-**CORS configuration** - API route protection<br/>
-**Secure key storage** - Server-side only, never exposed to client<br/>
-**Git security** - `.env.local` properly excluded, never committed
+**Environment variable validation**<br/>
+API key format checking, missing key detection<br/>
+<br/>
+**Comprehensive error handling**<br/>
+Specific responses for 401, 429, 500, quota errors<br/>
+<br/>
+**Rate limiting**<br/>
+10 requests/minute per IP (configurable)<br/>
+<br/>
+**Input sanitization**<br/>
+XSS prevention, length limits, filtering<br/>
+<br/>
+**CSP headers**<br/>
+Strict Content Security Policy<br/>
+<br/>
+**Secure key storage**<br/>
+Server-side only, never exposed to client
 
 </td>
 <td width="50%" align="center">
 
 ### 📊 Monitoring & Operations
 
-**Detailed error logging** - Console output for debugging<br/>
-**User-friendly error messages** - Clear actionable feedback<br/>
-**OpenAI API v6.7.0** - Latest stable version<br/>
-**Quota detection** - Billing/limit warnings<br/>
-**Rate limit headers** - X-RateLimit-Remaining tracking<br/>
-**Build verification** - TypeScript strict mode, zero lint warnings<br/>
-**Documentation** - [SECURITY_RECOMMENDATIONS.md](SECURITY_RECOMMENDATIONS.md), [FIX_SUMMARY.md](FIX_SUMMARY.md)<br/>
-**Cost optimization** - ~$15-25/month operational costs
+**Detailed error logging**<br/>
+Console output for debugging<br/>
+<br/>
+**User-friendly error messages**<br/>
+Clear actionable feedback<br/>
+<br/>
+**OpenAI API v6.7.0**<br/>
+Latest stable version<br/>
+<br/>
+**Quota detection**<br/>
+Billing/limit warnings<br/>
+<br/>
+**Build verification**<br/>
+TypeScript strict mode, zero lint warnings<br/>
+<br/>
+**Cost optimization**<br/>
+~$15-25/month operational costs
 
 </td>
 </tr>
@@ -334,36 +382,25 @@ Static PDFs get skimmed. Static websites get skipped. An AI assistant that can d
 
 </div>
 
-### 📄 Additional Documentation
+**Additional Documentation:**
+- [SECURITY_RECOMMENDATIONS.md](SECURITY_RECOMMENDATIONS.md) - API key security, rotation procedures
+- [FIX_SUMMARY.md](FIX_SUMMARY.md) - Complete troubleshooting guide, fix history
+- [CONTRIBUTING.md](CONTRIBUTING.md) - Contribution guidelines, coding standards
 
-- **[SECURITY_RECOMMENDATIONS.md](SECURITY_RECOMMENDATIONS.md)** - API key security, rotation procedures, best practices
-- **[FIX_SUMMARY.md](FIX_SUMMARY.md)** - Complete troubleshooting guide, fix history, deployment checklist
-- **[CONTRIBUTING.md](CONTRIBUTING.md)** - Contribution guidelines, coding standards, PR process
-
----
-
-## 🤝 Contributing
-
-This project is open source under the MIT License. Fork it, modify it, use it for your own portfolio. If you build something interesting with it, I'd love to see it.
-
-<div align="center">
-
-### Fork it, make it yours! No credit needed. 🚀
-
-</div>
+</details>
 
 ---
 
-## 📜 License
+## 📄 License & Usage
 
-**MIT License - Free to use, modify, and distribute**
+**MIT License** — Fork it, customize it, do whatever you want with it. No credit needed (but a ⭐ appreciated).
 
-This project is licensed under the MIT License, meaning you can:
-- ✅ Use it for personal or commercial projects
-- ✅ Modify and adapt the code however you want
-- ✅ Distribute copies or modified versions
-- ✅ Use it in private or public projects
-- ✅ No attribution required (though appreciated!)
+**Quick setup:** `git clone` → `npm install` → add API key → `npm run dev` → `vercel deploy`
+
+<details>
+<summary><b>📋 Full license text</b></summary>
+
+<br/>
 
 ```
 MIT License
@@ -389,6 +426,49 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
+</details>
+
+<br/>
+
+<div align="center">
+
+<img src="https://img.shields.io/badge/License-MIT-555555?style=for-the-badge&logo=opensourceinitiative&logoColor=white"/>
+
+Full license text in [LICENSE](LICENSE) file.
+
+</div>
+
+---
+
+## 📬 About & Connect
+
+By day, I work as a Lead CRM Systems Analyst at Computershare, managing CRM platforms serving 3,000+ users across 22 countries. By night, I build AI-powered projects like this.
+
+I'm into AI/ML integration, full-stack development, enterprise architecture, WebGL graphics, and always shipping clean code. Never stop learning, never stop building.
+
+**Let's connect:**
+
+<div align="center">
+
+<a href="https://ai-portfolio-hazel-nine.vercel.app">
+  <img src="https://img.shields.io/badge/Portfolio-AI_Demo-2d7a3e?style=for-the-badge&logo=vercel&logoColor=white"/>
+</a>
+<a href="https://github.com/Zacsluss">
+  <img src="https://img.shields.io/badge/GitHub-@Zacsluss-181717?style=for-the-badge&logo=github&logoColor=white"/>
+</a>
+<a href="https://linkedin.com/in/zacharyjsluss">
+  <img src="https://img.shields.io/badge/LinkedIn-Zachary_Sluss-064789?style=for-the-badge&logo=linkedin&logoColor=white"/>
+</a>
+<a href="mailto:zacsluss@yahoo.com">
+  <img src="https://img.shields.io/badge/Email-zacsluss@yahoo.com-b91c1c?style=for-the-badge&logo=gmail&logoColor=white"/>
+</a>
+
+<br/>
+
+**Found this helpful?** Give it a ⭐ to show support!
+
+</div>
+
 ---
 
 <div align="center">
@@ -396,9 +476,5 @@ SOFTWARE.
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,12,20&height=100&section=footer"/>
 
 **Built by [Zachary Sluss](https://github.com/Zacsluss)** • MIT License
-
-[![Portfolio](https://img.shields.io/badge/🌐_My_Portfolio-2d7a3e?style=flat-square)](https://zacsluss.github.io/portfolio)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0055A4?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/zacharyjsluss)
-[![Email](https://img.shields.io/badge/Email-8B2E0F?style=flat-square&logo=gmail&logoColor=white)](mailto:zacsluss@yahoo.com)
 
 </div>
