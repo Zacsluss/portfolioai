@@ -6,12 +6,12 @@
 /**
  * Deep freezes an object to make it immutable at runtime
  */
-function deepFreeze<T>(obj: T): T {
+function deepFreeze<T extends Record<string, unknown>>(obj: T): T {
   Object.freeze(obj);
   Object.getOwnPropertyNames(obj).forEach((prop) => {
-    const value = (obj as any)[prop];
+    const value = obj[prop as keyof T];
     if (value && typeof value === 'object') {
-      deepFreeze(value);
+      deepFreeze(value as Record<string, unknown>);
     }
   });
   return obj;
