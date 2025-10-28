@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import OpenAI from 'openai';
+import { logger } from '@/lib/logger';
+import { API_CONFIG } from '@/lib/config';
 
 // Initialize OpenAI client lazily to avoid build-time errors
 function getOpenAIClient() {
@@ -21,8 +23,7 @@ export async function POST(req: NextRequest) {
     }
 
     // Validate file size (max 25MB for Whisper API)
-    const maxSize = 25 * 1024 * 1024; // 25MB
-    if (audioFile.size > maxSize) {
+    if (audioFile.size > API_CONFIG.UPLOAD.MAX_AUDIO_SIZE) {
       return NextResponse.json(
         { error: 'Audio file too large. Maximum size is 25MB.' },
         { status: 400 }
@@ -30,8 +31,7 @@ export async function POST(req: NextRequest) {
     }
 
     // Validate file type
-    const allowedTypes = ['audio/webm', 'audio/mp4', 'audio/mpeg', 'audio/wav', 'audio/ogg'];
-    if (!allowedTypes.includes(audioFile.type)) {
+    if (!API_CONFIG.UPLOAD.ALLOWED_AUDIO_TYPES.includes(audioFile.type)) {
       return NextResponse.json(
         { error: 'Invalid audio format. Supported: webm, mp4, mpeg, wav, ogg' },
         { status: 400 }
@@ -40,7 +40,7 @@ export async function POST(req: NextRequest) {
 
     // Validate API key
     if (!process.env.OPENAI_API_KEY) {
-      console.error('OPENAI_API_KEY is not set');
+      logger.error('OPENAI_API_KEY is not set');
       return NextResponse.json(
         { error: 'Service temporarily unavailable' },
         { status: 503 }
@@ -63,9 +63,10 @@ export async function POST(req: NextRequest) {
     });
 
   } catch (error: unknown) {
-    console.error('Transcription API error:', error);
+    logger.error('Transcription API error:', error);
 
     if (error && typeof error === 'object' && 'status' in error && error.status === 401) {
+      logger.error('OpenAI API Authentication Error');
       return NextResponse.json(
         { error: 'Invalid API key configuration' },
         { status: 500 }

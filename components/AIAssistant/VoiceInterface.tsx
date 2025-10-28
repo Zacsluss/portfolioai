@@ -5,6 +5,7 @@ import { Mic, MicOff, Volume2, VolumeX, Loader2 } from 'lucide-react';
 import { useAssistantStore } from '@/lib/store';
 import { extractNavigationCommand, removeNavigationCommand, scrollToSection } from '@/lib/utils';
 import { motion, AnimatePresence } from 'framer-motion';
+import { logger } from '@/lib/logger';
 
 export function VoiceInterface() {
   const [isRecording, setIsRecording] = useState(false);
@@ -55,7 +56,7 @@ export function VoiceInterface() {
       mediaRecorder.start();
       setIsRecording(true);
     } catch (err) {
-      console.error('Error accessing microphone:', err);
+      logger.error('Error accessing microphone:', err);
       setError('Could not access microphone. Please check permissions.');
     }
   };
@@ -153,7 +154,7 @@ export function VoiceInterface() {
       }
 
     } catch (err) {
-      console.error('Processing error:', err);
+      logger.error('Processing error:', err);
       setError('An error occurred. Please try again.');
       addMessage('assistant', "I'm sorry, I encountered an error. Please try again.");
     } finally {
@@ -188,7 +189,7 @@ export function VoiceInterface() {
 
       await audio.play();
     } catch (err) {
-      console.error('TTS error:', err);
+      logger.error('TTS error:', err);
       setIsSpeaking(false);
     }
   };

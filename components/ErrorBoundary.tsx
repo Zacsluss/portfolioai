@@ -2,6 +2,7 @@
 
 import React, { Component, ReactNode } from 'react';
 import { AlertTriangle } from 'lucide-react';
+import { logger } from '@/lib/logger';
 
 interface Props {
   children: ReactNode;
@@ -28,8 +29,8 @@ export class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    // Log error to console in development
-    console.error('Error caught by boundary:', error, errorInfo);
+    // Log error using logger (automatically handles dev/prod environments)
+    logger.error('Error caught by boundary:', error, { errorInfo });
 
     // In production, you could send this to an error tracking service
     if (process.env.NODE_ENV === 'production') {

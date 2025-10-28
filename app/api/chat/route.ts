@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import OpenAI from 'openai';
 import type { ChatCompletionMessageParam } from 'openai/resources/chat/completions';
 import { generateSystemPrompt, assistantConfig } from '@/lib/assistant-context';
+import { logger } from '@/lib/logger';
+import { API_CONFIG } from '@/lib/config';
 
 // Initialize OpenAI client lazily to avoid build-time errors
 function getOpenAIClient() {
@@ -13,13 +15,14 @@ function getOpenAIClient() {
 /**
  * Sanitize user input to prevent injection attacks
  * Removes potentially dangerous characters and limits length
+ * @param text - The input text to sanitize
+ * @returns Sanitized and safe text string
  */
 function sanitizeInput(text: string): string {
   if (!text || typeof text !== 'string') return '';
 
   // Limit length to prevent abuse
-  const maxLength = 2000;
-  let sanitized = text.slice(0, maxLength);
+  let sanitized = text.slice(0, API_CONFIG.INPUT.MAX_LENGTH);
 
   // Remove null bytes and other control characters
   sanitized = sanitized.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/g, '');
@@ -33,10 +36,15 @@ function sanitizeInput(text: string): string {
 // Simple in-memory rate limiting (use Redis in production)
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
 
+/**
+ * Check if request from IP address has exceeded rate limit
+ * @param ip - Client IP address
+ * @returns Object indicating if request is allowed and remaining quota
+ */
 function checkRateLimit(ip: string): { allowed: boolean; remaining: number } {
   const now = Date.now();
-  const limit = parseInt(process.env.RATE_LIMIT_MAX_REQUESTS || '10');
-  const windowMs = parseInt(process.env.RATE_LIMIT_WINDOW_MS || '60000');
+  const limit = API_CONFIG.RATE_LIMIT.MAX_REQUESTS;
+  const windowMs = API_CONFIG.RATE_LIMIT.WINDOW_MS;
 
   const record = rateLimitMap.get(ip);
 
@@ -82,7 +90,7 @@ export async function POST(req: NextRequest) {
     }
 
     // Validate and sanitize messages
-    if (messages.length === 0 || messages.length > 50) {
+    if (messages.length === 0 || messages.length > API_CONFIG.INPUT.MAX_MESSAGES) {
       return NextResponse.json(
         { error: 'Invalid message count' },
         { status: 400 }
@@ -102,7 +110,7 @@ export async function POST(req: NextRequest) {
 
     // Validate API key
     if (!process.env.OPENAI_API_KEY) {
-      console.error('OPENAI_API_KEY is not set in environment variables');
+      logger.error('OPENAI_API_KEY is not set in environment variables');
       return NextResponse.json(
         { error: 'Service configuration error: API key not found. Please check server configuration.' },
         { status: 503 }
@@ -110,8 +118,8 @@ export async function POST(req: NextRequest) {
     }
 
     // Validate API key format
-    if (!process.env.OPENAI_API_KEY.startsWith('sk-')) {
-      console.error('OPENAI_API_KEY has invalid format (should start with sk-)');
+    if (!process.env.OPENAI_API_KEY.startsWith(API_CONFIG.OPENAI_KEY_PREFIX)) {
+      logger.error('OPENAI_API_KEY has invalid format (should start with sk-)');
       return NextResponse.json(
         { error: 'Service configuration error: Invalid API key format.' },
         { status: 503 }
@@ -150,7 +158,7 @@ export async function POST(req: NextRequest) {
           controller.enqueue(encoder.encode('data: [DONE]\n\n'));
           controller.close();
         } catch (error) {
-          console.error('Streaming error:', error);
+          logger.error('Streaming error:', error);
           controller.error(error);
         }
       },
@@ -166,7 +174,7 @@ export async function POST(req: NextRequest) {
     });
 
   } catch (error: unknown) {
-    console.error('Chat API error:', error);
+    logger.error('Chat API error:', error);
 
     // Enhanced error handling with specific messages
     if (error && typeof error === 'object') {
@@ -175,7 +183,7 @@ export async function POST(req: NextRequest) {
         const status = error.status as number;
 
         if (status === 401) {
-          console.error('OpenAI API Authentication Error: Invalid API key');
+          logger.error('OpenAI API Authentication Error: Invalid API key');
           return NextResponse.json(
             { error: 'Invalid API key configuration. Please check your OpenAI API key.' },
             { status: 500 }
@@ -183,7 +191,7 @@ export async function POST(req: NextRequest) {
         }
 
         if (status === 429) {
-          console.error('OpenAI API Rate Limit Error');
+          logger.error('OpenAI API Rate Limit Error');
           return NextResponse.json(
             { error: 'OpenAI API rate limit exceeded. Please try again in a moment.' },
             { status: 429 }
@@ -191,7 +199,7 @@ export async function POST(req: NextRequest) {
         }
 
         if (status === 500 || status === 503) {
-          console.error('OpenAI API Server Error');
+          logger.error('OpenAI API Server Error');
           return NextResponse.json(
             { error: 'OpenAI service is temporarily unavailable. Please try again later.' },
             { status: 503 }
@@ -199,7 +207,7 @@ export async function POST(req: NextRequest) {
         }
 
         if (status === 400) {
-          console.error('OpenAI API Bad Request:', 'message' in error ? error.message : 'Unknown error');
+          logger.error('OpenAI API Bad Request:', 'message' in error ? error.message : 'Unknown error');
           return NextResponse.json(
             { error: 'Invalid request to AI service. Please try a different message.' },
             { status: 400 }
@@ -210,7 +218,7 @@ export async function POST(req: NextRequest) {
       // Check for insufficient quota error
       if ('message' in error && typeof error.message === 'string') {
         if (error.message.includes('insufficient_quota') || error.message.includes('quota')) {
-          console.error('OpenAI API Quota Error:', error.message);
+          logger.error('OpenAI API Quota Error:', error.message);
           return NextResponse.json(
             { error: 'OpenAI account has insufficient quota. Please check your billing settings.' },
             { status: 402 }
@@ -218,7 +226,7 @@ export async function POST(req: NextRequest) {
         }
 
         // Log the actual error message for debugging
-        console.error('OpenAI API Error Message:', error.message);
+        logger.error('OpenAI API Error Message:', error.message);
       }
     }
 

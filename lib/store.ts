@@ -46,17 +46,20 @@ export const useAssistantStore = create<AssistantStore>((set) => ({
   setIsOpen: (isOpen) => set({ isOpen }),
 
   addMessage: (role, content) =>
-    set((state) => ({
-      messages: [
-        ...state.messages,
-        {
-          id: `${Date.now()}-${Math.random()}`,
-          role,
-          content,
-          timestamp: Date.now(),
-        },
-      ],
-    })),
+    set((state) => {
+      const maxMessages = parseInt(process.env.NEXT_PUBLIC_MAX_MESSAGE_HISTORY || '50');
+      const newMessage = {
+        id: `${Date.now()}-${Math.random()}`,
+        role,
+        content,
+        timestamp: Date.now(),
+      };
+
+      // Keep only the most recent messages to prevent memory leaks
+      const updatedMessages = [...state.messages, newMessage].slice(-maxMessages);
+
+      return { messages: updatedMessages };
+    }),
 
   clearMessages: () => set({ messages: [] }),
   setIsListening: (isListening) => set({ isListening }),

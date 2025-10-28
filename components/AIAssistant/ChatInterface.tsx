@@ -5,6 +5,7 @@ import { Send, Loader2 } from 'lucide-react';
 import { useAssistantStore } from '@/lib/store';
 import { extractNavigationCommand, removeNavigationCommand, scrollToSection } from '@/lib/utils';
 import { motion, AnimatePresence } from 'framer-motion';
+import { logger } from '@/lib/logger';
 
 export function ChatInterface() {
   const [input, setInput] = useState('');
@@ -88,7 +89,7 @@ export function ChatInterface() {
       addMessage('assistant', cleanMessage);
 
     } catch (error) {
-      console.error('Chat error:', error);
+      logger.error('Chat error:', error);
       addMessage('assistant', "I'm sorry, I encountered an error. Please try again.");
     } finally {
       setIsLoading(false);

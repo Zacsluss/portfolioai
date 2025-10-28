@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import OpenAI from 'openai';
 import { assistantConfig } from '@/lib/assistant-context';
+import { logger } from '@/lib/logger';
 
 // Initialize OpenAI client lazily to avoid build-time errors
 function getOpenAIClient() {
@@ -22,7 +23,7 @@ export async function POST(req: NextRequest) {
 
     // Validate API key
     if (!process.env.OPENAI_API_KEY) {
-      console.error('OPENAI_API_KEY is not set');
+      logger.error('OPENAI_API_KEY is not set');
       return NextResponse.json(
         { error: 'Service temporarily unavailable' },
         { status: 503 }
@@ -51,9 +52,10 @@ export async function POST(req: NextRequest) {
     });
 
   } catch (error: unknown) {
-    console.error('TTS API error:', error);
+    logger.error('TTS API error:', error);
 
     if (error && typeof error === 'object' && 'status' in error && error.status === 401) {
+      logger.error('OpenAI API Authentication Error');
       return NextResponse.json(
         { error: 'Invalid API key configuration' },
         { status: 500 }
