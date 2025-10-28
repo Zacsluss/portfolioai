@@ -67,6 +67,8 @@
 
 ### 🔥 Recent Updates (2025)
 
+<div align="center">
+
 <table>
 <tr>
 <td width="33%" align="center">
@@ -83,6 +85,8 @@
 </td>
 </tr>
 </table>
+
+</div>
 
 <br/>
 
@@ -122,6 +126,8 @@
 
 **Integrating GPT-4o into a production-grade portfolio that serves as both a demonstration of AI integration capabilities and a functional career showcase.** The result is a Next.js 14 application with server-side API routes protecting sensitive keys, streaming responses for optimal perceived performance, and Whisper API integration for real-time voice transcription.
 
+<div align="center">
+
 <table>
 <tr>
 <td width="50%">
@@ -141,7 +147,7 @@
 ### 📈 The Numbers
 
 | Metric                  | Value                   |
-| ----------------------- | ----------------------- |
+| :---------------------: | :---------------------: |
 | AI Model                | GPT-4o                  |
 | Voice API               | Whisper                 |
 | Framework               | Next.js 14              |
@@ -154,9 +160,13 @@
 </tr>
 </table>
 
+</div>
+
 ---
 
 ## 🚀 Quick Start
+
+<div align="center">
 
 <table>
 <tr>
@@ -194,6 +204,8 @@ One-click deployment
 </tr>
 </table>
 
+</div>
+
 <br/>
 
 <details>
@@ -222,6 +234,8 @@ One-click deployment
 </div>
 
 <br/>
+
+<div align="center">
 
 <table>
 <tr>
@@ -255,6 +269,8 @@ One-click deployment
 </tr>
 </table>
 
+</div>
+
 ---
 
 ## 💭 Why I Built This
@@ -280,6 +296,8 @@ Static PDFs get skimmed. Static websites get skipped. An AI assistant that can d
 ## 🔒 Production-Ready Features
 
 **This isn't a proof-of-concept—it's production-grade code designed for real-world deployment.**
+
+<div align="center">
 
 <table>
 <tr>
@@ -313,6 +331,8 @@ Static PDFs get skimmed. Static websites get skipped. An AI assistant that can d
 </td>
 </tr>
 </table>
+
+</div>
 
 ### 📄 Additional Documentation
 
