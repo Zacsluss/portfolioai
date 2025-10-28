@@ -31,7 +31,7 @@ export async function POST(req: NextRequest) {
     }
 
     // Validate file type
-    if (!API_CONFIG.UPLOAD.ALLOWED_AUDIO_TYPES.includes(audioFile.type)) {
+    if (!(API_CONFIG.UPLOAD.ALLOWED_AUDIO_TYPES as readonly string[]).includes(audioFile.type)) {
       return NextResponse.json(
         { error: 'Invalid audio format. Supported: webm, mp4, mpeg, wav, ogg' },
         { status: 400 }
