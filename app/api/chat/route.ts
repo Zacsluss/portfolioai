@@ -3,7 +3,7 @@ import OpenAI from 'openai';
 import type { ChatCompletionMessageParam } from 'openai/resources/chat/completions';
 import { generateSystemPrompt, assistantConfig } from '@/lib/assistant-context';
 import { logger } from '@/lib/logger';
-import { API_CONFIG } from '@/lib/config';
+import { API_CONFIG, APP_CONFIG } from '@/lib/config';
 
 // Initialize OpenAI client lazily to avoid build-time errors
 function getOpenAIClient() {
@@ -118,7 +118,7 @@ export async function POST(req: NextRequest) {
     }
 
     // Validate API key format
-    if (!process.env.OPENAI_API_KEY.startsWith(API_CONFIG.OPENAI_KEY_PREFIX)) {
+    if (!process.env.OPENAI_API_KEY.startsWith(APP_CONFIG.OPENAI_KEY_PREFIX)) {
       logger.error('OPENAI_API_KEY has invalid format (should start with sk-)');
       return NextResponse.json(
         { error: 'Service configuration error: Invalid API key format.' },
