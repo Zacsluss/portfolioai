@@ -35,7 +35,7 @@ export function Contact() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="glass-card-hover rounded-lg p-6 hover:border-matrix-500/50 transition-all group"
+              className="glass-card-hover glass-flash rounded-lg p-6 hover:border-matrix-500/50 transition-all group"
             >
               <div className="flex items-start gap-4">
                 <div className="p-3 bg-matrix-500/10 rounded-lg group-hover:bg-matrix-500/20 transition-colors">
@@ -58,7 +58,7 @@ export function Contact() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="glass-card-hover rounded-lg p-6 hover:border-matrix-500/50 transition-all group"
+                className="glass-card-hover glass-flash rounded-lg p-6 hover:border-matrix-500/50 transition-all group"
               >
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-matrix-500/10 rounded-lg group-hover:bg-matrix-500/20 transition-colors">
@@ -80,7 +80,7 @@ export function Contact() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="glass-card-hover rounded-lg p-6"
+              className="glass-card-hover glass-flash rounded-lg p-6"
             >
               <div className="flex items-start gap-4">
                 <div className="p-3 bg-matrix-500/10 rounded-lg">
@@ -100,7 +100,7 @@ export function Contact() {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="glass-card-hover rounded-lg p-6"
+            className="glass-card-hover glass-flash rounded-lg p-6"
           >
             <h3 className="text-white font-semibold mb-4 text-center">Connect With Me</h3>
             <div className="flex flex-wrap items-center justify-center gap-4">

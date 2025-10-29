@@ -48,11 +48,11 @@ export function FloatingGeometry() {
         ctx.translate(centerX, centerY);
         ctx.rotate(rotation + offset);
 
-        // Create gradient for glow effect - blue accent
+        // Create gradient for glow effect - more transparent in center, more opaque outwards
         const gradient = ctx.createRadialGradient(0, 0, radius - 20, 0, 0, radius + 20);
-        gradient.addColorStop(0, 'rgba(56, 189, 248, 0)');
-        gradient.addColorStop(0.5, 'rgba(56, 189, 248, 0.15)');
-        gradient.addColorStop(1, 'rgba(56, 189, 248, 0)');
+        gradient.addColorStop(0, 'rgba(56, 189, 248, 0.05)');
+        gradient.addColorStop(0.5, 'rgba(56, 189, 248, 0.25)');
+        gradient.addColorStop(1, 'rgba(56, 189, 248, 0.1)');
 
         // Draw ring
         ctx.strokeStyle = gradient;
@@ -61,22 +61,28 @@ export function FloatingGeometry() {
         ctx.arc(0, 0, radius, 0, Math.PI * 2);
         ctx.stroke();
 
-        // Draw connecting lines
+        // Draw connecting lines with gradient opacity based on distance from center
         const points = 6;
-        ctx.strokeStyle = 'rgba(56, 189, 248, 0.1)';
-        ctx.lineWidth = 0.5;
         for (let j = 0; j < points; j++) {
           const angle = (j * Math.PI * 2) / points + time;
           const x = Math.cos(angle) * radius;
           const y = Math.sin(angle) * radius;
 
+          // Create line gradient from center to edge
+          const lineGradient = ctx.createLinearGradient(0, 0, x, y);
+          lineGradient.addColorStop(0, 'rgba(56, 189, 248, 0.02)');
+          lineGradient.addColorStop(1, 'rgba(56, 189, 248, 0.15)');
+
+          ctx.strokeStyle = lineGradient;
+          ctx.lineWidth = 0.5;
           ctx.beginPath();
           ctx.moveTo(0, 0);
           ctx.lineTo(x, y);
           ctx.stroke();
 
-          // Draw small circles at endpoints
-          ctx.fillStyle = 'rgba(56, 189, 248, 0.3)';
+          // Draw small circles at endpoints - more opaque at outer edges
+          const circleOpacity = 0.2 + (i * 0.15);
+          ctx.fillStyle = `rgba(56, 189, 248, ${circleOpacity})`;
           ctx.beginPath();
           ctx.arc(x, y, 2, 0, Math.PI * 2);
           ctx.fill();
@@ -85,32 +91,19 @@ export function FloatingGeometry() {
         ctx.restore();
       }
 
-      // Draw central pulsing sphere
+      // Draw central pulsing sphere with reduced opacity
       const pulseRadius = 25 + Math.sin(time * 1.5) * 8;
       const pulseGradient = ctx.createRadialGradient(
         centerX, centerY, 0,
         centerX, centerY, pulseRadius * 1.5
       );
-      pulseGradient.addColorStop(0, 'rgba(14, 165, 233, 0.4)');
-      pulseGradient.addColorStop(0.5, 'rgba(14, 165, 233, 0.2)');
+      pulseGradient.addColorStop(0, 'rgba(14, 165, 233, 0.15)');
+      pulseGradient.addColorStop(0.5, 'rgba(14, 165, 233, 0.08)');
       pulseGradient.addColorStop(1, 'rgba(14, 165, 233, 0)');
 
       ctx.fillStyle = pulseGradient;
       ctx.beginPath();
       ctx.arc(centerX, centerY, pulseRadius * 1.5, 0, Math.PI * 2);
-      ctx.fill();
-
-      // Inner core
-      const coreGradient = ctx.createRadialGradient(
-        centerX, centerY, 0,
-        centerX, centerY, pulseRadius
-      );
-      coreGradient.addColorStop(0, 'rgba(56, 189, 248, 0.6)');
-      coreGradient.addColorStop(1, 'rgba(14, 165, 233, 0.3)');
-
-      ctx.fillStyle = coreGradient;
-      ctx.beginPath();
-      ctx.arc(centerX, centerY, pulseRadius, 0, Math.PI * 2);
       ctx.fill();
 
       animationFrameId = requestAnimationFrame(animate);

@@ -40,7 +40,7 @@ export function Experience() {
                 <div className="absolute left-[-9px] top-0 w-4 h-4 bg-accent-400 rounded-full border-4 border-black ring-2 ring-accent-400/20" />
 
                 {/* Content */}
-                <div className="glass-card-hover p-6">
+                <div className="glass-card-hover glass-flash p-6">
                   <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
                     <div>
                       <h3 className="text-xl font-bold text-white">{exp.position}</h3>

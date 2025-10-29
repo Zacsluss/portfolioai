@@ -75,7 +75,7 @@ export function Projects() {
                 initial={{ opacity: 0, y: 50 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`relative glass-card-hover rounded-lg p-6 hover:border-matrix-500/50 transition-all group ${
+                className={`relative glass-card-hover glass-flash rounded-lg p-6 hover:border-matrix-500/50 transition-all group ${
                   project.highlighted ? 'md:col-span-2' : ''
                 }`}
               >

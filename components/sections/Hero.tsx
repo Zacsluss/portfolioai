@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, ExternalLink, Download, Sparkles, Bot } from 'lucide-react';
 import { portfolioData } from '@/lib/portfolio-data';
 import { useAssistantStore } from '@/lib/store';
+import { useMouseParallax } from '@/lib/hooks';
 import dynamic from 'next/dynamic';
 
 const FloatingGeometry = dynamic(() => import('@/components/3D/FloatingGeometry').then(mod => ({ default: mod.FloatingGeometry })), {
@@ -30,6 +31,11 @@ export function Hero() {
   const { personal, social } = portfolioData;
   const { setIsOpen, setMode, addMessage } = useAssistantStore();
 
+  // Parallax effects with different intensities for depth
+  const parallaxBg = useMouseParallax(15);
+  const parallaxMid = useMouseParallax(25);
+  const parallaxFg = useMouseParallax(35);
+
   // ZARVIS introduction handler - Simple and guaranteed to work
   const handleZarvisClick = () => {
     // Switch to chat mode
@@ -48,14 +54,24 @@ export function Hero() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
       {/* Background Effects */}
-      <div className="absolute inset-0 z-0">
+      <div
+        className="absolute inset-0 z-0 transition-transform duration-200 ease-out"
+        style={{
+          transform: `translate(${parallaxBg.x}px, ${parallaxBg.y}px)`
+        }}
+      >
         <GradientMesh />
         <LightBeams />
         <AmbientParticles />
       </div>
 
       {/* 3D Floating Elements */}
-      <div className="absolute inset-0 z-10 pointer-events-none">
+      <div
+        className="absolute inset-0 z-10 pointer-events-none transition-transform duration-200 ease-out"
+        style={{
+          transform: `translate(${parallaxFg.x}px, ${parallaxFg.y}px)`
+        }}
+      >
         <FloatingGeometry />
       </div>
 
@@ -128,14 +144,14 @@ export function Hero() {
           >
             <a
               href="#contact"
-              className="glass-button px-8 py-4 rounded-xl font-semibold hover:scale-105 transition-all"
+              className="glass-button glass-flash px-8 py-4 rounded-xl font-semibold hover:scale-105 transition-all"
             >
               <Mail className="w-5 h-5 inline mr-2" />
               Get in Touch
             </a>
             <a
               href="#projects"
-              className="glass-button px-8 py-4 rounded-xl font-semibold hover:scale-105 transition-all"
+              className="glass-button glass-flash px-8 py-4 rounded-xl font-semibold hover:scale-105 transition-all"
             >
               <ExternalLink className="w-5 h-5 inline mr-2" />
               View Projects
@@ -143,7 +159,7 @@ export function Hero() {
             <a
               href="/resume.pdf"
               download
-              className="glass-button px-8 py-4 rounded-xl font-semibold hover:scale-105 transition-all"
+              className="glass-button glass-flash px-8 py-4 rounded-xl font-semibold hover:scale-105 transition-all"
             >
               <Download className="w-5 h-5 inline mr-2" />
               Download Resume

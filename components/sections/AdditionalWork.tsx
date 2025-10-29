@@ -60,7 +60,7 @@ export default function AdditionalWork() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     whileHover={{ y: -5 }}
-                    className="glass-card p-6 hover:bg-white/10 transition-all group overflow-hidden"
+                    className="glass-card-hover glass-flash p-6 hover:bg-white/10 transition-all group overflow-hidden"
                   >
                     <div className="flex items-start gap-4">
                       {/* Image Thumbnail */}

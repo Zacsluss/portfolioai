@@ -2,9 +2,10 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import { portfolioData } from '@/lib/portfolio-data';
 import { MapPin, User } from 'lucide-react';
+import { useMouseParallax } from '@/lib/hooks';
 import dynamic from 'next/dynamic';
 
 const AmbientParticles = dynamic(() => import('@/components/effects/AmbientParticles').then(mod => ({ default: mod.AmbientParticles })), {
@@ -16,22 +17,15 @@ export function About() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const { personal } = portfolioData;
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
-  // Subtle parallax effect
-  const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = (e.clientX - rect.left - rect.width / 2) / rect.width;
-    const y = (e.clientY - rect.top - rect.height / 2) / rect.height;
-    setMousePosition({ x, y });
-  };
+  // Reduced parallax effect for secondary sections
+  const parallax = useMouseParallax(8);
 
   return (
     <section
       id="about"
       ref={ref}
       className="relative flex items-center py-12 px-4 sm:px-6 lg:px-8 overflow-hidden"
-      onMouseMove={handleMouseMove}
     >
       {/* Ambient particles */}
       <div className="absolute inset-0 opacity-40 pointer-events-none">
@@ -42,7 +36,7 @@ export function About() {
       <div
         className="absolute inset-0 bg-[linear-gradient(to_right,#38bdf810_1px,transparent_1px),linear-gradient(to_bottom,#38bdf810_1px,transparent_1px)] bg-[size:3rem_3rem] opacity-30 transition-transform duration-200 ease-out"
         style={{
-          transform: `translate(${mousePosition.x * 15}px, ${mousePosition.y * 15}px)`
+          transform: `translate(${parallax.x * 1.5}px, ${parallax.y * 1.5}px)`
         }}
       />
 
@@ -50,7 +44,7 @@ export function About() {
       <div
         className="absolute inset-0 transition-transform duration-300 ease-out pointer-events-none"
         style={{
-          transform: `translate(${mousePosition.x * 8}px, ${mousePosition.y * 8}px)`
+          transform: `translate(${parallax.x}px, ${parallax.y}px)`
         }}
       >
         <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent-400/10 to-transparent" />
@@ -109,7 +103,7 @@ export function About() {
               initial={{ opacity: 0, x: 50 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="glass-card-hover p-6 space-y-4"
+              className="glass-card-hover glass-flash p-6 space-y-4"
             >
               <h3 className="text-xl font-semibold text-accent-400 mb-4">Quick Facts</h3>
 

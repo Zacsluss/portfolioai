@@ -71,7 +71,7 @@ export function Navigation() {
         transition={{ duration: 0.5, delay: 0.2 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? 'glass-card shadow-lg shadow-black/20'
+            ? 'glass-card glass-flash shadow-lg shadow-black/20'
             : 'bg-transparent'
         }`}
       >
@@ -135,7 +135,7 @@ export function Navigation() {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="md:hidden overflow-hidden glass-card border-t border-white/10"
+              className="md:hidden overflow-hidden glass-card-hover glass-flash border-t border-white/10"
             >
               <div className="px-4 py-4 space-y-2">
                 {navItems.map((item) => {
