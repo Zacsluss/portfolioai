@@ -12,21 +12,21 @@
 
 <!-- Main Action Buttons -->
 <p align="center">
-  <a href="https://ai-portfolio-hazel-nine.vercel.app">
+  <a href="https://portfoliozarvis.vercel.app">
     <img src="https://img.shields.io/badge/🤖_TALK-TO_ZARVIS-2e8b57?style=for-the-badge&labelColor=000000&logo=openai&logoColor=white" alt="Try Demo"/>
   </a>
-  <a href="https://github.com/Zacsluss/portfolioai/archive/refs/heads/main.zip">
+  <a href="https://github.com/Zacsluss/portfolio_zarvis/archive/refs/heads/main.zip">
     <img src="https://img.shields.io/badge/⬇️_DOWNLOAD-TEMPLATE-d97706?style=for-the-badge&labelColor=000000&logo=github&logoColor=white" alt="Download"/>
   </a>
 </p>
 
 <!-- GitHub Stats Badges -->
 <p align="center">
-  <img src="https://img.shields.io/github/stars/Zacsluss/portfolioai?style=social" alt="Stars"/>
-  <img src="https://img.shields.io/github/forks/Zacsluss/portfolioai?style=social" alt="Forks"/>
-  <img src="https://img.shields.io/github/watchers/Zacsluss/portfolioai?style=social" alt="Watchers"/>
-  <img src="https://img.shields.io/github/license/Zacsluss/portfolioai?style=flat-square&color=555555" alt="License"/>
-  <img src="https://img.shields.io/github/last-commit/Zacsluss/portfolioai?style=flat-square&color=666666" alt="Last Commit"/>
+  <img src="https://img.shields.io/github/stars/Zacsluss/portfolio_zarvis?style=social" alt="Stars"/>
+  <img src="https://img.shields.io/github/forks/Zacsluss/portfolio_zarvis?style=social" alt="Forks"/>
+  <img src="https://img.shields.io/github/watchers/Zacsluss/portfolio_zarvis?style=social" alt="Watchers"/>
+  <img src="https://img.shields.io/github/license/Zacsluss/portfolio_zarvis?style=flat-square&color=555555" alt="License"/>
+  <img src="https://img.shields.io/github/last-commit/Zacsluss/portfolio_zarvis?style=flat-square&color=666666" alt="Last Commit"/>
 </p>
 
 </div>
@@ -279,7 +279,7 @@ Server-side key protection, input sanitization
 
 ```bash
 # 1️⃣ Clone this repo
-git clone https://github.com/Zacsluss/portfolioai.git
+git clone https://github.com/Zacsluss/portfolio_zarvis.git
 cd portfolioai
 
 # 2️⃣ Install dependencies
@@ -450,7 +450,7 @@ I'm into AI/ML integration, full-stack development, enterprise architecture, Web
 
 <div align="center">
 
-<a href="https://ai-portfolio-hazel-nine.vercel.app">
+<a href="https://portfoliozarvis.vercel.app">
   <img src="https://img.shields.io/badge/Portfolio-AI_Demo-2e7d5a?style=for-the-badge&logo=vercel&logoColor=white"/>
 </a>
 <a href="https://github.com/Zacsluss">
