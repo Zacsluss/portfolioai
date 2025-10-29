@@ -28,10 +28,10 @@ export function MagneticCursor() {
     const animate = () => {
       const currentTime = Date.now();
 
-      // Smooth cursor position with spring physics
+      // Smooth cursor position with spring physics (0.7 = more responsive)
       cursorRef.current = {
-        x: cursorRef.current.x + (mouseRef.current.x - cursorRef.current.x) * 0.2,
-        y: cursorRef.current.y + (mouseRef.current.y - cursorRef.current.y) * 0.2
+        x: cursorRef.current.x + (mouseRef.current.x - cursorRef.current.x) * 0.7,
+        y: cursorRef.current.y + (mouseRef.current.y - cursorRef.current.y) * 0.7
       };
       setPosition({ ...cursorRef.current });
 
