@@ -33,7 +33,6 @@ export function Hero() {
 
   // Parallax effects with different intensities for depth
   const parallaxBg = useMouseParallax(15);
-  const parallaxMid = useMouseParallax(25);
   const parallaxFg = useMouseParallax(35);
 
   // ZARVIS introduction handler - Simple and guaranteed to work
