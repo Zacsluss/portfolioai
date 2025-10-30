@@ -52,7 +52,7 @@ export function Experience() {
                         {formatDate(exp.startDate)} - {exp.endDate ? formatDate(exp.endDate) : 'Present'}
                       </span>
                       <span className="text-gray-600">•</span>
-                      <span>{calculateDuration(exp.startDate, exp.endDate)}</span>
+                      <span suppressHydrationWarning>{calculateDuration(exp.startDate, exp.endDate)}</span>
                     </div>
                   </div>
 
