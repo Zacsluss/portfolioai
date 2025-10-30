@@ -37,15 +37,13 @@
 
 ## 👋 Hey, I'm Zac
 
-I manage enterprise platforms by day and build AI-powered projects by night. This portfolio features **ZARVIS, a conversational AI assistant** trained on my entire career history—powered by GPT-4o and Whisper API.
+I architect enterprise CRM platforms for 3,000+ users by day. By night, I build AI-powered projects like **ZARVIS**—a conversational AI assistant trained on my entire career history using GPT-4o and Whisper API.
 
-**What makes it interesting:**
-- Talk to an AI that knows my 7 years of Salesforce architecture across 22 countries
-- Voice or text input with Whisper API transcription
+**What you'll experience:**
+- AI that knows 7 years of Salesforce architecture across 22 countries
+- Voice or text input with real-time transcription
 - Production-grade Next.js 14 with streaming responses
-- Dual mode: Professional consultant OR D&D dungeon master
-
-Built with Next.js, TypeScript, and OpenAI's latest APIs!
+- Dual personality: Professional consultant ↔ D&D dungeon master
 
 <div align="center">
 
@@ -65,13 +63,11 @@ Built with Next.js, TypeScript, and OpenAI's latest APIs!
 
 </div>
 
-**Key Features:**
-- 🤖 Talk to ZARVIS about my career, projects, and technical decisions
-- 🎙️ Voice transcription with Whisper API for natural conversations
-- 💬 Multi-turn context management remembers conversation history
-- 🎮 Dual mode: Professional consultant OR fun D&D dungeon master
-
-**Tech:** Next.js 14 • TypeScript 5.3 • GPT-4o • Whisper API • Vercel
+**Why it stands out:**
+- 🎯 Real AI integration, not a chatbot wrapper
+- 🎙️ Production voice input with Whisper API
+- 🔒 Secure server-side architecture
+- 🎮 Personality switching: Professional ↔ D&D DM
 
 ---
 
@@ -96,9 +92,16 @@ Built with Next.js, TypeScript, and OpenAI's latest APIs!
 
 <div align="center">
 
-### What I Used to Build This
-
 <img src="https://skillicons.dev/icons?i=nextjs,typescript,vercel,react,tailwind,nodejs" alt="Tech Stack" />
+
+</div>
+
+<details>
+<summary><b>📦 View dependencies, architecture & tech decisions</b></summary>
+
+<br/>
+
+<div align="center">
 
 ### Core Dependencies
 
@@ -125,9 +128,6 @@ Built with Next.js, TypeScript, and OpenAI's latest APIs!
 
 </div>
 
-<details>
-<summary><b>📦 See the full tech details</b></summary>
-
 **Why this stack?**
 
 - **Next.js 14** - App Router with server-side API routes (protects API keys)
@@ -153,7 +153,7 @@ Next.js 14 App Router
 
 ## 🤖 AI Features
 
-**This isn't just a portfolio—it's an AI-powered conversation about my career.**
+**AI-powered career conversations. Not just a portfolio.**
 
 <details>
 <summary><b>🧠 See all AI capabilities</b></summary>
@@ -211,6 +211,11 @@ Server-side key protection, input sanitization
 
 ## 📊 Performance & Stats
 
+<details>
+<summary><b>📈 View production metrics & technical achievements</b></summary>
+
+<br/>
+
 <div align="center">
 
 ### Real numbers from production deployment
@@ -241,7 +246,7 @@ Server-side key protection, input sanitization
 <tr><td align="center">Rate Limiting</td><td align="center">✅</td></tr>
 <tr><td align="center">Error Handling</td><td align="center">✅</td></tr>
 <tr><td align="center">Documentation</td><td align="center">✅</td></tr>
-<tr><td align="center">Cost: $5-20/mo</td><td align="center">💰</td></tr>
+<tr><td align="center">Cost: $15-20/mo</td><td align="center">💰</td></tr>
 </table>
 
 </td>
@@ -250,12 +255,9 @@ Server-side key protection, input sanitization
 
 </div>
 
-<details>
-<summary><b>💡 The Technical Challenge</b></summary>
+**The Technical Challenge:**
 
-<br/>
-
-**Integrating GPT-4o into a production-grade portfolio** that serves as both a demonstration of AI integration capabilities and a functional career showcase.
+Integrating GPT-4o into a production-grade portfolio that serves as both a demonstration of AI integration capabilities and a functional career showcase.
 
 **What I solved:**
 - ✅ Server-side API routes protect sensitive keys
@@ -263,7 +265,7 @@ Server-side key protection, input sanitization
 - ✅ Whisper API integration for voice transcription
 - ✅ Production error handling (401, 429, 500, quota errors)
 - ✅ Rate limiting and security hardening
-- ✅ Cost-effective deployment ($5-20/month)
+- ✅ Cost-effective deployment ($15-20/month)
 
 </details>
 
@@ -320,7 +322,7 @@ vercel deploy
 
 ## 🔒 Production Features
 
-**This isn't a proof-of-concept—it's production-grade code designed for real-world deployment.**
+**Production-grade code. Real-world deployment. Not a proof-of-concept.**
 
 <details>
 <summary><b>🛡️ See all security & reliability features</b></summary>
@@ -442,9 +444,7 @@ Full license text in [LICENSE](LICENSE) file.
 
 ## 📬 About & Connect
 
-By day, I work as a Lead CRM Systems Analyst at Computershare, managing CRM platforms serving 3,000+ users across 22 countries. By night, I build AI-powered projects like this.
-
-I'm into AI/ML integration, full-stack development, enterprise architecture, WebGL graphics, and always shipping clean code. Never stop learning, never stop building.
+Lead CRM Systems Analyst architecting platforms for 3K+ users across 22 countries by day. AI builder shipping side projects by night.
 
 **Let's connect:**
 
