@@ -23,6 +23,7 @@ export default function Home() {
         style={{
           transform: `translate(${globalParallax.x}px, ${globalParallax.y}px)`
         }}
+        suppressHydrationWarning
       />
 
       {/* Navigation */}

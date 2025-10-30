@@ -38,6 +38,7 @@ export function About() {
         style={{
           transform: `translate(${parallax.x * 1.5}px, ${parallax.y * 1.5}px)`
         }}
+        suppressHydrationWarning
       />
 
       {/* Light beams */}

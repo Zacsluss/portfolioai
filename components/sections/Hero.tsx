@@ -58,6 +58,7 @@ export function Hero() {
         style={{
           transform: `translate(${parallaxBg.x}px, ${parallaxBg.y}px)`
         }}
+        suppressHydrationWarning
       >
         <GradientMesh />
         <LightBeams />
@@ -70,6 +71,7 @@ export function Hero() {
         style={{
           transform: `translate(${parallaxFg.x}px, ${parallaxFg.y}px)`
         }}
+        suppressHydrationWarning
       >
         <FloatingGeometry />
       </div>
