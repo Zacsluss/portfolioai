@@ -48,7 +48,7 @@ export function Experience() {
                     </div>
                     <div className="flex items-center gap-2 text-sm text-gray-400">
                       <Calendar className="w-4 h-4" />
-                      <span>
+                      <span suppressHydrationWarning>
                         {formatDate(exp.startDate)} - {exp.endDate ? formatDate(exp.endDate) : 'Present'}
                       </span>
                       <span className="text-gray-600">•</span>
