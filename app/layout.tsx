@@ -1,12 +1,16 @@
 import type { Metadata } from 'next';
 import { Inter, Space_Mono } from 'next/font/google';
-import { Analytics } from '@vercel/analytics/react';
 import './globals.css';
 import { portfolioData } from '@/lib/portfolio-data';
 import { ErrorBoundary } from '@/components/ErrorBoundary';
 import dynamic from 'next/dynamic';
 
 const MagneticCursor = dynamic(() => import('@/components/effects/MagneticCursor').then(mod => ({ default: mod.MagneticCursor })), {
+  ssr: false,
+  loading: () => null
+});
+
+const Analytics = dynamic(() => import('@vercel/analytics/react').then(mod => ({ default: mod.Analytics })), {
   ssr: false,
   loading: () => null
 });

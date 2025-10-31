@@ -10,20 +10,25 @@ import AdditionalWork from '@/components/sections/AdditionalWork';
 import { Contact } from '@/components/sections/Contact';
 import { Assistant } from '@/components/AIAssistant/Assistant';
 import { useMouseParallax } from '@/lib/hooks';
+import { useState, useEffect } from 'react';
 
 export default function Home() {
   // Subtle global parallax for background
   const globalParallax = useMouseParallax(5);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   return (
     <main className="relative">
       {/* Background gradient overlay with subtle parallax */}
       <div
         className="fixed inset-0 bg-gradient-to-b from-black via-gray-900/50 to-black pointer-events-none transition-transform duration-300 ease-out"
-        style={{
+        style={isMounted ? {
           transform: `translate(${globalParallax.x}px, ${globalParallax.y}px)`
-        }}
-        suppressHydrationWarning
+        } : undefined}
       />
 
       {/* Navigation */}

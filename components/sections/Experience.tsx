@@ -1,10 +1,21 @@
 'use client';
 
 import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { portfolioData } from '@/lib/portfolio-data';
 import { formatDate, calculateDuration } from '@/lib/utils';
 import { Briefcase, Calendar } from 'lucide-react';
+
+// Client-only duration calculator to prevent hydration mismatches
+function Duration({ startDate, endDate }: { startDate: string; endDate?: string }) {
+  const [duration, setDuration] = useState<string>('');
+
+  useEffect(() => {
+    setDuration(calculateDuration(startDate, endDate));
+  }, [startDate, endDate]);
+
+  return <span>{duration}</span>;
+}
 
 export function Experience() {
   const ref = useRef(null);
@@ -52,7 +63,7 @@ export function Experience() {
                         {formatDate(exp.startDate)} - {exp.endDate ? formatDate(exp.endDate) : 'Present'}
                       </span>
                       <span className="text-gray-600">•</span>
-                      <span suppressHydrationWarning>{calculateDuration(exp.startDate, exp.endDate)}</span>
+                      <Duration startDate={exp.startDate} endDate={exp.endDate} />
                     </div>
                   </div>
 

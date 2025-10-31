@@ -6,6 +6,7 @@ import { portfolioData } from '@/lib/portfolio-data';
 import { useAssistantStore } from '@/lib/store';
 import { useMouseParallax } from '@/lib/hooks';
 import dynamic from 'next/dynamic';
+import { useState, useEffect } from 'react';
 
 const FloatingGeometry = dynamic(() => import('@/components/3D/FloatingGeometry').then(mod => ({ default: mod.FloatingGeometry })), {
   ssr: false,
@@ -34,6 +35,11 @@ export function Hero() {
   // Parallax effects with different intensities for depth
   const parallaxBg = useMouseParallax(15);
   const parallaxFg = useMouseParallax(35);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   // ZARVIS introduction handler - Simple and guaranteed to work
   const handleZarvisClick = () => {
@@ -55,10 +61,9 @@ export function Hero() {
       {/* Background Effects */}
       <div
         className="absolute inset-0 z-0 transition-transform duration-200 ease-out"
-        style={{
+        style={isMounted ? {
           transform: `translate(${parallaxBg.x}px, ${parallaxBg.y}px)`
-        }}
-        suppressHydrationWarning
+        } : undefined}
       >
         <GradientMesh />
         <LightBeams />
@@ -68,10 +73,9 @@ export function Hero() {
       {/* 3D Floating Elements */}
       <div
         className="absolute inset-0 z-10 pointer-events-none transition-transform duration-200 ease-out"
-        style={{
+        style={isMounted ? {
           transform: `translate(${parallaxFg.x}px, ${parallaxFg.y}px)`
-        }}
-        suppressHydrationWarning
+        } : undefined}
       >
         <FloatingGeometry />
       </div>

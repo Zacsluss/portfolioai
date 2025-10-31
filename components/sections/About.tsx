@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { portfolioData } from '@/lib/portfolio-data';
 import { MapPin, User } from 'lucide-react';
 import { useMouseParallax } from '@/lib/hooks';
@@ -20,6 +20,11 @@ export function About() {
 
   // Reduced parallax effect for secondary sections
   const parallax = useMouseParallax(8);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   return (
     <section
@@ -35,10 +40,9 @@ export function About() {
       {/* Parallax grid - more visible */}
       <div
         className="absolute inset-0 bg-[linear-gradient(to_right,#38bdf810_1px,transparent_1px),linear-gradient(to_bottom,#38bdf810_1px,transparent_1px)] bg-[size:3rem_3rem] opacity-30 transition-transform duration-200 ease-out"
-        style={{
+        style={isMounted ? {
           transform: `translate(${parallax.x * 1.5}px, ${parallax.y * 1.5}px)`
-        }}
-        suppressHydrationWarning
+        } : undefined}
       />
 
       {/* Light beams */}
