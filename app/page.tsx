@@ -3,10 +3,9 @@
 import { Navigation } from '@/components/navigation/Navigation';
 import { Hero } from '@/components/sections/Hero';
 import { About } from '@/components/sections/About';
-import { Experience } from '@/components/sections/Experience';
-import { Projects } from '@/components/sections/Projects';
 import { Skills } from '@/components/sections/Skills';
-import AdditionalWork from '@/components/sections/AdditionalWork';
+import { Experience } from '@/components/sections/Experience';
+import { Leadership } from '@/components/sections/Leadership';
 import { Contact } from '@/components/sections/Contact';
 import { Assistant } from '@/components/AIAssistant/Assistant';
 import { useMouseParallax } from '@/lib/hooks';
@@ -38,10 +37,9 @@ export default function Home() {
       <div className="relative z-10">
         <Hero />
         <About />
-        <Experience />
-        <Projects />
         <Skills />
-        <AdditionalWork />
+        <Experience />
+        <Leadership />
         <Contact />
       </div>
 
