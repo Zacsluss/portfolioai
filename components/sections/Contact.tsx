@@ -11,16 +11,16 @@ export function Contact() {
   const { personal, social } = portfolioData;
 
   return (
-    <section id="contact" ref={ref} className="min-h-screen flex items-center py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto w-full">
+    <section id="contact" ref={ref} className="min-h-screen flex items-center py-[5.75rem] px-[1.15rem] sm:px-[1.725rem] lg:px-[2.3rem]">
+      <div className="max-w-5xl mx-auto w-full">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
           {/* Section Header */}
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white quantum-heading mb-4">Get In Touch</h2>
+          <div className="text-center mb-[3.45rem]">
+            <h2 className="text-4xl font-bold text-white quantum-heading mb-[1.15rem]">Get In Touch</h2>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
               I&apos;m always open to new opportunities and interesting projects.
               Feel free to reach out if you&apos;d like to connect!
@@ -28,16 +28,16 @@ export function Contact() {
           </div>
 
           {/* Contact Cards */}
-          <div className="grid md:grid-cols-2 gap-6 mb-12">
+          <div className="grid md:grid-cols-2 gap-[1.725rem] mb-[3.45rem]">
             {/* Email */}
             <motion.a
               href={`mailto:${personal.email}`}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="glass-card-hover glass-flash rounded-lg p-6 hover:border-matrix-500/50 transition-all group"
+              className="glass-card-hover glass-flash rounded-lg p-[1.725rem] hover:border-matrix-500/50 transition-all group"
             >
-              <div className="flex items-start gap-4">
+              <div className="flex items-start gap-[1.15rem]">
                 <div className="p-3 bg-matrix-500/10 rounded-lg group-hover:bg-matrix-500/20 transition-colors">
                   <Mail className="w-6 h-6 text-accent-400" />
                 </div>
@@ -58,9 +58,9 @@ export function Contact() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="glass-card-hover glass-flash rounded-lg p-6 hover:border-matrix-500/50 transition-all group"
+                className="glass-card-hover glass-flash rounded-lg p-[1.725rem] hover:border-matrix-500/50 transition-all group"
               >
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-[1.15rem]">
                   <div className="p-3 bg-matrix-500/10 rounded-lg group-hover:bg-matrix-500/20 transition-colors">
                     <Phone className="w-6 h-6 text-accent-400" />
                   </div>
@@ -80,9 +80,9 @@ export function Contact() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="glass-card-hover glass-flash rounded-lg p-6"
+              className="glass-card-hover glass-flash rounded-lg p-[1.725rem]"
             >
-              <div className="flex items-start gap-4">
+              <div className="flex items-start gap-[1.15rem]">
                 <div className="p-3 bg-matrix-500/10 rounded-lg">
                   <MapPin className="w-6 h-6 text-accent-400" />
                 </div>
@@ -100,10 +100,10 @@ export function Contact() {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="glass-card-hover glass-flash rounded-lg p-6"
+            className="glass-card-hover glass-flash rounded-lg p-[1.725rem]"
           >
-            <h3 className="text-white font-semibold mb-4 text-center">Connect With Me</h3>
-            <div className="flex flex-wrap items-center justify-center gap-4">
+            <h3 className="text-white font-semibold mb-[1.15rem] text-center">Connect With Me</h3>
+            <div className="flex flex-wrap items-center justify-center gap-[1.15rem]">
               {social.github && (
                 <a
                   href={social.github}
@@ -160,7 +160,7 @@ export function Contact() {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="mt-8 text-center"
+            className="mt-[2.3rem] text-center"
           >
             <a
               href="/resume.pdf"

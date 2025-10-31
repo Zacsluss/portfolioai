@@ -51,17 +51,17 @@ export function Leadership() {
   }, {} as Record<string, typeof additionalLinks>);
 
   return (
-    <section id="leadership" className="relative py-24 px-6">
-      <div className="max-w-6xl mx-auto">
+    <section id="leadership" className="relative py-[6.9rem] px-[1.725rem]">
+      <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-[4.6rem]"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 quantum-text">
+          <h2 className="text-4xl md:text-5xl font-bold mb-[1.725rem] quantum-text">
             Leadership & Passions
           </h2>
           <p className="text-lg text-white/70 max-w-3xl mx-auto leading-relaxed">
@@ -72,7 +72,7 @@ export function Leadership() {
         </motion.div>
 
         {/* Leadership Principles Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-[1.725rem] mb-[4.6rem]">
           {principles.map((principle, index) => (
             <motion.div
               key={index}
@@ -80,23 +80,23 @@ export function Leadership() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="glass-card-hover glass-flash p-6"
+              className="glass-card-hover glass-flash p-[1.725rem]"
             >
-              <div className="text-4xl mb-4">{principle.icon}</div>
-              <h3 className="text-xl font-bold mb-3 text-accent-400">{principle.title}</h3>
+              <div className="text-4xl mb-[1.15rem]">{principle.icon}</div>
+              <h3 className="text-xl font-bold mb-[0.86rem] text-accent-400">{principle.title}</h3>
               <p className="text-white/70 text-sm leading-relaxed">{principle.description}</p>
             </motion.div>
           ))}
         </div>
 
         {/* Key Metrics */}
-        <div className="grid md:grid-cols-3 gap-6 mb-16">
+        <div className="grid md:grid-cols-3 gap-[1.725rem] mb-[4.6rem]">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="glass-card-hover p-8 text-center"
+            className="glass-card-hover p-[2.3rem] text-center"
           >
             <div className="text-5xl font-bold text-accent-400 mb-2">40%</div>
             <div className="text-lg font-semibold text-white mb-2">Productivity Gains</div>
@@ -108,7 +108,7 @@ export function Leadership() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="glass-card-hover p-8 text-center"
+            className="glass-card-hover p-[2.3rem] text-center"
           >
             <div className="text-5xl font-bold text-accent-400 mb-2">1,000+</div>
             <div className="text-lg font-semibold text-white mb-2">Hours Automated</div>
@@ -120,7 +120,7 @@ export function Leadership() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="glass-card-hover p-8 text-center"
+            className="glass-card-hover p-[2.3rem] text-center"
           >
             <div className="text-5xl font-bold text-accent-400 mb-2">100%</div>
             <div className="text-lg font-semibold text-white mb-2">SOX Compliance</div>
@@ -134,15 +134,15 @@ export function Leadership() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-12"
+          className="mb-[3.45rem]"
         >
-          <h3 className="text-3xl font-bold mb-4 text-center">Beyond the Enterprise</h3>
-          <p className="text-lg text-white/70 text-center max-w-2xl mx-auto mb-12">
+          <h3 className="text-3xl font-bold mb-[1.15rem] text-center">Beyond the Enterprise</h3>
+          <p className="text-lg text-white/70 text-center max-w-2xl mx-auto mb-[3.45rem]">
             Multi-passionate about AI/ML, digital art, music production, and 360° drone photography —
             because curiosity makes better strategists.
           </p>
 
-          <div className="space-y-12">
+          <div className="space-y-[3.45rem]">
             {Object.entries(groupedLinks).map(([category, links], categoryIndex) => (
               <motion.div
                 key={category}
@@ -151,11 +151,11 @@ export function Leadership() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
               >
-                <h4 className="text-2xl font-bold mb-6 text-accent-400">
+                <h4 className="text-2xl font-bold mb-[1.725rem] text-accent-400">
                   {category}
                 </h4>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-[1.725rem]">
                   {links.map((link, index) => (
                     <motion.a
                       key={link.id}
@@ -167,9 +167,9 @@ export function Leadership() {
                       viewport={{ once: true }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                       whileHover={{ y: -5 }}
-                      className="glass-card-hover glass-flash p-6 hover:bg-white/10 transition-all group overflow-hidden"
+                      className="glass-card-hover glass-flash p-[1.725rem] hover:bg-white/10 transition-all group overflow-hidden"
                     >
-                      <div className="flex items-start gap-4">
+                      <div className="flex items-start gap-[1.15rem]">
                         {/* Image Thumbnail */}
                         {link.image && (
                           <div className="relative w-20 h-20 flex-shrink-0 rounded-xl overflow-hidden ring-2 ring-accent-500/20 group-hover:ring-accent-400/50 transition-all">

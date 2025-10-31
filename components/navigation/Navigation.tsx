@@ -70,9 +70,10 @@ export function Navigation() {
         transition={{ duration: 0.5, delay: 0.2 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? 'glass-card glass-flash shadow-lg shadow-black/20'
+            ? 'glass-card glass-flash shadow-lg shadow-black/20 backdrop-blur-xl bg-white/5 border-b border-white/10'
             : 'bg-transparent'
         }`}
+        style={{ position: 'fixed' }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-center h-16">

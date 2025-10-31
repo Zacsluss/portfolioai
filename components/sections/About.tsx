@@ -30,7 +30,7 @@ export function About() {
     <section
       id="about"
       ref={ref}
-      className="relative flex items-center py-12 px-4 sm:px-6 lg:px-8 overflow-hidden"
+      className="relative flex items-center py-[3.45rem] px-[1.15rem] sm:px-[1.725rem] lg:px-[2.3rem] overflow-hidden"
     >
       {/* Ambient particles */}
       <div className="absolute inset-0 opacity-40 pointer-events-none">
@@ -55,14 +55,14 @@ export function About() {
         <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent-400/10 to-transparent" />
         <div className="absolute bottom-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent-400/10 to-transparent" />
       </div>
-      <div className="max-w-5xl mx-auto w-full">
+      <div className="max-w-6xl mx-auto w-full">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
           {/* Section Header */}
-          <div className="flex items-center gap-4 mb-12">
+          <div className="flex items-center gap-[1.15rem] mb-[3.45rem]">
             <User className="w-8 h-8 text-accent-400" />
             <h2 className="text-4xl font-bold text-white quantum-heading">About Me</h2>
             <div className="flex-1 h-[2px] bg-gradient-to-r from-accent-400 to-transparent" />
@@ -73,7 +73,7 @@ export function About() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex justify-center mb-12"
+            className="flex justify-center mb-[3.45rem]"
           >
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-accent-400 to-accent-600 rounded-full opacity-75 group-hover:opacity-100 blur transition duration-300"></div>
@@ -85,13 +85,13 @@ export function About() {
             </div>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8 items-start">
+          <div className="grid md:grid-cols-2 gap-[2.3rem] items-start">
             {/* Bio */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="space-y-4"
+              className="space-y-[1.15rem]"
             >
               <p className="text-gray-300 text-lg leading-relaxed">
                 {personal.bio}
@@ -108,7 +108,7 @@ export function About() {
               initial={{ opacity: 0, x: 50 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="glass-card-hover glass-flash p-6 space-y-4"
+              className="glass-card-hover glass-flash p-[1.725rem] space-y-[1.15rem]"
             >
               <h3 className="text-xl font-semibold text-accent-400 mb-4">Quick Facts</h3>
 

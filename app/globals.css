@@ -29,6 +29,7 @@
 
   html {
     scroll-behavior: smooth;
+    font-size: 14px; /* Reduced from default 16px */
   }
 
   /* Custom scrollbar - Apple style */

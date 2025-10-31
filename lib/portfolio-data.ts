@@ -49,6 +49,9 @@ export interface Project {
   id: string;
   title: string;
   description: string;
+  problem?: string;
+  solution?: string;
+  impact?: string;
   longDescription?: string;
   technologies: string[];
   features: string[];
@@ -56,6 +59,7 @@ export interface Project {
   demo?: string;
   image?: string;
   highlighted?: boolean;
+  color?: string;
 }
 
 export interface SkillCategory {
@@ -67,6 +71,7 @@ export interface Skill {
   name: string;
   level?: 'Beginner' | 'Intermediate' | 'Advanced' | 'Expert';
   years?: number;
+  certified?: boolean;
 }
 
 export interface Education {
@@ -84,7 +89,7 @@ export const portfolioData: PortfolioData = {
     name: "Zachary Sluss",
     title: "Lead CRM Systems Analyst | Enterprise Technology Leader",
     tagline: "Driving $10M+ revenue impact through enterprise platform leadership, team building, and strategic digital transformation across Fortune 500 organizations",
-    bio: "Enterprise Technology Leader with 7+ years architecting CRM, ERP, and data platform ecosystems that deliver measurable business outcomes. Expert at leading cross-functional teams (60+ people), governing $5M+ platform budgets, and aligning technology investments with board-level growth objectives. Proven track record: 40% productivity gains, $8M+ incremental ARR, 3,000+ users across 22 countries. Passionate about building high-performing teams, driving organizational change, and leveraging AI/ML to solve complex business problems.",
+    bio: "I design and govern the digital ecosystems that keep global enterprises running - spanning Salesforce, ERP, and data clouds across 20+ countries and millions in technology investments. I turn complexity into clarity, automation into scale, and platforms into measurable growth - often improving productivity by 40% or more!\n\nBy day, I architect multi-cloud systems and negotiate million-dollar vendor contracts; by night, I build unique digital experiences and pilot drones through physics-defying spaces. Whether it's enterprise architecture or visual experiments, my work always comes down to the same thing: precision, performance, and a curiosity that never switches off.",
     location: "New Hampshire, USA (Remote)",
     email: "zacharyjsluss@gmail.com",
     phone: "(603) 515-6051",
@@ -197,6 +202,9 @@ export const portfolioData: PortfolioData = {
       id: "proj-1",
       title: "Global Salesforce Multi-Cloud Transformation",
       description: "Enterprise-wide CRM modernization unifying 3,000+ users across 22 countries with integrated ERP, HCM, and analytics",
+      problem: "Computershare operated with 22 disconnected regional CRM instances across global markets, causing data silos, inconsistent reporting, and 40% slower sales cycles. Leadership lacked real-time visibility into global pipeline, forecasting required manual consolidation from disparate sources, and M&A integrations took 6+ months due to platform fragmentation.",
+      solution: "Architected comprehensive digital transformation program integrating Salesforce Multi-Cloud (Sales, Service, CPQ, Data Cloud) with Workday HCM and SAP ERP. Implemented API-led integration architecture using MuleSoft, established enterprise-wide governance framework ensuring SOX compliance, and built real-time executive dashboards for C-suite decision-making. Standardized business processes across 22 countries while maintaining regional flexibility.",
+      impact: "40% increase in sales operational throughput • 1,000+ hours automated annually • $2M+ cost avoidance through platform consolidation • 100% SOX audit compliance with zero breaches • Real-time board-level visibility replacing 3-week manual reporting cycles",
       longDescription: "Led comprehensive digital transformation program integrating Salesforce Sales Cloud, Service Cloud, CPQ, and Data Cloud with Workday HCM and SAP ERP. Implemented API-led integration architecture using MuleSoft, established enterprise governance framework, and delivered real-time executive dashboards for C-suite decision-making.",
       technologies: ["Salesforce Multi-Cloud", "MuleSoft", "Workday HCM", "SAP ERP", "Tableau", "AWS", "API Management"],
       features: [
@@ -208,11 +216,15 @@ export const portfolioData: PortfolioData = {
         "40% increase in sales and operational throughput",
       ],
       highlighted: true,
+      color: "#00ff88",
     },
     {
       id: "proj-2",
       title: "Enterprise Managed Services Pricing Engine",
       description: "Intelligent pricing platform with embedded automation increasing deal velocity 30%",
+      problem: "Sales teams wasted 20+ hours per deal manually calculating pricing across fragmented product catalogs with inconsistent discount approval processes. Regional pricing variations created compliance risks, and leadership lacked visibility into pricing trends and margin erosion patterns.",
+      solution: "Designed and implemented global pricing platform within Salesforce CPQ, standardizing product catalog across all regions with automated discounting logic based on deal parameters, customer segments, and competitive intelligence. Integrated with ERP for real-time cost synchronization and built intelligent approval workflows routing only exception cases to leadership.",
+      impact: "30% improvement in deal closure velocity • 20+ hours saved per sales cycle • Standardized pricing across 22+ countries • Real-time margin visibility for finance team • Reduced pricing errors by 95%",
       longDescription: "Designed and implemented global pricing platform within Salesforce CPQ, standardizing product catalog, pricing models, and approval workflows. Integrated with ERP for real-time cost data and built automated discounting logic based on deal parameters, customer segments, and regional considerations.",
       technologies: ["Salesforce CPQ", "ERP Integration", "Pricing Automation", "Workflow Engine", "Business Rules"],
       features: [
@@ -223,11 +235,15 @@ export const portfolioData: PortfolioData = {
         "30% improvement in deal closure velocity",
       ],
       highlighted: true,
+      color: "#0088ff",
     },
     {
       id: "proj-3",
       title: "Cloud-Based Loan Origination Platform",
       description: "Integrated lending platform reducing approval cycles 35% for $46M+ loan portfolio",
+      problem: "CIT Bank's $46M+ syndicate lending program relied on manual credit decisioning with paper-based compliance checks, creating 10-14 day approval cycles and compliance risks. Portfolio managers lacked real-time visibility into risk exposure, and new coordinators required 6+ weeks training on fragmented legacy systems.",
+      solution: "Deployed cloud-based loan origination system integrating CRM, analytics, and automated compliance engines. Built intelligent credit scoring workflows with real-time risk assessment, automated regulatory compliance checks, and executive dashboards providing portfolio-wide insights. Created standardized training frameworks reducing coordinator ramp time by 80%.",
+      impact: "35% reduction in approval cycle time • 80% faster new-hire onboarding • Zero compliance incidents during tenure • Real-time portfolio risk monitoring for executive team • $46M+ managed with improved operational precision",
       longDescription: "Deployed cloud-based loan origination system integrating CRM, analytics, and compliance tools for national syndicate lending program. Built automated workflows for credit decisioning, risk assessment, and compliance checks, with executive dashboards providing real-time portfolio insights.",
       technologies: ["Cloud LOS", "CRM Integration", "Analytics Platforms", "Compliance Automation", "Risk Management"],
       features: [
@@ -238,96 +254,126 @@ export const portfolioData: PortfolioData = {
         "35% reduction in approval cycle time",
       ],
       highlighted: true,
+      color: "#ff006e",
     },
   ],
   skills: [
     {
       category: "Analytics & Business Intelligence",
       skills: [
-        { name: "Data Strategy", level: "Expert", years: 8 },
-        { name: "Google Analytics", level: "Advanced", years: 8 },
-        { name: "Looker", level: "Advanced", years: 3 },
-        { name: "Power BI", level: "Advanced", years: 6 },
-        { name: "Tableau", level: "Expert", years: 5 },
+        { name: "Enterprise Data Strategy", level: "Expert", years: 6 },
+        { name: "Google Analytics", level: "Expert", years: 5 },
+        { name: "Looker", level: "Intermediate", years: 2 },
+        { name: "Power BI", level: "Expert", years: 6 },
+        { name: "Tableau (Certified)", level: "Expert", years: 6, certified: true },
       ],
     },
     {
-      category: "Automation & Security",
+      category: "Cloud Architecture & DevOps",
       skills: [
-        { name: "Automation Anywhere", level: "Advanced", years: 4 },
-        { name: "CrowdStrike", level: "Advanced", years: 4 },
-        { name: "Okta SSO", level: "Advanced", years: 4 },
-        { name: "OneTrust", level: "Advanced", years: 4 },
-        { name: "Palo Alto Prisma Cloud", level: "Advanced", years: 4 },
-        { name: "Splunk", level: "Advanced", years: 4 },
-        { name: "TrustArc", level: "Advanced", years: 4 },
-        { name: "UiPath", level: "Advanced", years: 4 },
+        { name: "AWS (Certified)", level: "Expert", years: 5, certified: true },
+        { name: "Cloud Architecture & Transformation", level: "Expert", years: 5 },
+        { name: "Docker", level: "Expert", years: 6 },
+        { name: "Google Cloud Platform (GCP)", level: "Advanced", years: 4 },
+        { name: "Infrastructure as Code (CloudFormation, Terraform)", level: "Advanced", years: 4 },
+        { name: "Kubernetes", level: "Intermediate", years: 2 },
+        { name: "Microsoft Azure & DevOps", level: "Advanced", years: 4 },
       ],
     },
     {
-      category: "Cloud & DevOps",
+      category: "Collaboration & Project Management",
       skills: [
-        { name: "AWS", level: "Expert", years: 4 },
-        { name: "CI/CD Pipelines", level: "Advanced", years: 4 },
-        { name: "Google Cloud Platform", level: "Advanced", years: 4 },
-        { name: "Microsoft Azure", level: "Advanced", years: 4 },
-      ],
-    },
-    {
-      category: "Enterprise Architecture & Project Management",
-      skills: [
-        { name: "Confluence", level: "Advanced", years: 6 },
+        { name: "Confluence", level: "Advanced", years: 3 },
         { name: "Jira", level: "Expert", years: 6 },
-        { name: "TOGAF", level: "Advanced", years: 4 },
-        { name: "Zachman Framework", level: "Advanced", years: 4 },
+        { name: "Microsoft Teams", level: "Expert", years: 6 },
+        { name: "Slack", level: "Expert", years: 6 },
+      ],
+    },
+    {
+      category: "Cybersecurity & Compliance",
+      skills: [
+        { name: "CrowdStrike", level: "Intermediate", years: 2 },
+        { name: "Data Loss Prevention (DLP)", level: "Advanced", years: 4 },
+        { name: "GDPR & CCPA", level: "Advanced", years: 4 },
+        { name: "Okta SSO", level: "Intermediate", years: 2 },
+        { name: "SOX Compliance", level: "Advanced", years: 4 },
+        { name: "Splunk", level: "Intermediate", years: 2 },
+        { name: "Zero Trust Architecture", level: "Advanced", years: 4 },
+      ],
+    },
+    {
+      category: "Enterprise Architecture & Frameworks",
+      skills: [
+        { name: "Enterprise Architecture Frameworks", level: "Intermediate", years: 2 },
+        { name: "TOGAF", level: "Intermediate", years: 2 },
+        { name: "Zachman Framework", level: "Intermediate", years: 2 },
+      ],
+    },
+    {
+      category: "Enterprise Automation & AI/ML",
+      skills: [
+        { name: "AI/ML Enablement & Enterprise Automation", level: "Expert", years: 5 },
+        { name: "Blue Prism", level: "Intermediate", years: 2 },
+        { name: "Make (Integromat)", level: "Advanced", years: 3 },
+        { name: "Pipedream", level: "Advanced", years: 3 },
+        { name: "Power Automate", level: "Advanced", years: 4 },
+        { name: "UiPath", level: "Intermediate", years: 2 },
+        { name: "Workato", level: "Advanced", years: 3 },
       ],
     },
     {
       category: "Enterprise CRM & Business Platforms",
       skills: [
-        { name: "Marketo", level: "Advanced", years: 4 },
-        { name: "Oracle Cloud Apps", level: "Advanced", years: 4 },
+        { name: "HubSpot", level: "Expert", years: 5 },
+        { name: "Microsoft Power Platform", level: "Advanced", years: 4 },
+        { name: "Oracle Cloud Applications", level: "Expert", years: 7 },
         { name: "Pardot", level: "Advanced", years: 4 },
         { name: "Salesforce CPQ", level: "Expert", years: 7 },
         { name: "Salesforce Data Cloud", level: "Expert", years: 7 },
+        { name: "Salesforce Experience Cloud", level: "Expert", years: 7 },
+        { name: "Salesforce Flow", level: "Advanced", years: 4 },
         { name: "Salesforce Marketing Cloud", level: "Expert", years: 7 },
-        { name: "Salesforce Multi-Cloud", level: "Expert", years: 7 },
-        { name: "SAP ERP", level: "Advanced", years: 3 },
-        { name: "ServiceNow", level: "Advanced", years: 4 },
-        { name: "Workday HCM", level: "Advanced", years: 4 },
+        { name: "Salesforce Multi-Cloud (Certified)", level: "Expert", years: 7, certified: true },
+        { name: "Salesforce Sales Cloud", level: "Expert", years: 7 },
+        { name: "Salesforce Service Cloud", level: "Expert", years: 7 },
+        { name: "SAP ERP", level: "Advanced", years: 4 },
+        { name: "ServiceNow & Flow Designer", level: "Expert", years: 5 },
+        { name: "Workday HCM", level: "Expert", years: 6 },
+        { name: "Zoho CRM", level: "Advanced", years: 4 },
       ],
     },
     {
-      category: "Governance & Compliance",
+      category: "Integration & Data Orchestration",
       skills: [
-        { name: "CCPA", level: "Advanced", years: 4 },
-        { name: "Enterprise Governance", level: "Expert", years: 4 },
-        { name: "GDPR", level: "Advanced", years: 4 },
-        { name: "Security & Risk Management", level: "Advanced", years: 7 },
-        { name: "SOX Compliance", level: "Expert", years: 4 },
-      ],
-    },
-    {
-      category: "Integration & Data Platforms",
-      skills: [
-        { name: "API Management", level: "Expert", years: 4 },
-        { name: "Apigee", level: "Advanced", years: 4 },
-        { name: "Google BigQuery", level: "Advanced", years: 4 },
-        { name: "Kong", level: "Advanced", years: 4 },
-        { name: "MuleSoft", level: "Expert", years: 4 },
-        { name: "Oracle", level: "Advanced", years: 5 },
-        { name: "Snowflake", level: "Advanced", years: 4 },
+        { name: "API Management (Apigee, Kong)", level: "Advanced", years: 4 },
+        { name: "Application Integration & Data Orchestration", level: "Advanced", years: 4 },
+        { name: "Google BigQuery", level: "Advanced", years: 3 },
+        { name: "MuleSoft", level: "Advanced", years: 4 },
+        { name: "Oracle Database", level: "Expert", years: 5 },
+        { name: "Snowflake", level: "Intermediate", years: 2 },
         { name: "SQL", level: "Expert", years: 7 },
       ],
     },
     {
-      category: "Modern Web Development",
+      category: "Modern Development & AI",
       skills: [
-        { name: "Next.js", level: "Advanced", years: 2 },
-        { name: "Node.js", level: "Advanced", years: 3 },
-        { name: "OpenAI API", level: "Advanced", years: 2 },
-        { name: "React", level: "Advanced", years: 3 },
-        { name: "TypeScript", level: "Advanced", years: 3 },
+        { name: "Next.js", level: "Intermediate", years: 2 },
+        { name: "Node.js", level: "Intermediate", years: 2 },
+        { name: "React", level: "Intermediate", years: 2 },
+        { name: "TypeScript", level: "Intermediate", years: 2 },
+      ],
+    },
+    {
+      category: "Strategic Leadership & Governance",
+      skills: [
+        { name: "API-Led Architecture", level: "Advanced", years: 4 },
+        { name: "Capital Planning & Budget Oversight", level: "Advanced", years: 4 },
+        { name: "Data Governance & Analytics Monetization", level: "Expert", years: 7 },
+        { name: "Digital Transformation Leadership", level: "Expert", years: 6 },
+        { name: "Enterprise Platform Governance", level: "Advanced", years: 4 },
+        { name: "Enterprise Technology Strategy & Governance", level: "Advanced", years: 4 },
+        { name: "Platform Integration & Roadmap Ownership", level: "Advanced", years: 4 },
+        { name: "Vendor Portfolio Strategy & Contract Negotiation", level: "Advanced", years: 4 },
       ],
     },
   ],
@@ -381,9 +427,9 @@ export const portfolioData: PortfolioData = {
     },
     {
       id: "link-13",
-      title: "Starfield Portfolio",
-      description: "Interactive 3D particle portfolio with 30,000 GPU-accelerated particles morphing in real-time",
-      url: "https://github.com/Zacsluss/portfolio",
+      title: "Portfolio Zarvis",
+      description: "A fun Conversation AI enabled portfolio with interactive chat capabilities",
+      url: "https://github.com/Zacsluss/portfolio_zarvis",
       category: "AI & Technology",
       image: "/portfolio-images/portfoliopicture.png",
     },

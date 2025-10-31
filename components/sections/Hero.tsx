@@ -81,8 +81,8 @@ export function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-20 max-w-7xl mx-auto px-6 py-32">
-        <div className="text-center space-y-8">
+      <div className="relative z-20 max-w-7xl mx-auto px-[1.725rem] py-[9.2rem]">
+        <div className="text-center space-y-[2.3rem]">
           {/* Name */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -119,7 +119,7 @@ export function Hero() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.5, duration: 0.8, type: "spring" }}
-            className="flex items-center justify-center pt-6"
+            className="flex items-center justify-center pt-[1.725rem]"
           >
             <button
               onClick={handleZarvisClick}
@@ -145,7 +145,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.8 }}
-            className="flex flex-wrap items-center justify-center gap-4 pt-8"
+            className="flex flex-wrap items-center justify-center gap-[1.15rem] pt-[2.3rem]"
           >
             <a
               href="#contact"
@@ -176,7 +176,7 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.9, duration: 0.8 }}
-            className="flex items-center justify-center gap-6 pt-8"
+            className="flex items-center justify-center gap-[1.725rem] pt-[2.3rem]"
           >
             {social.github && (
               <a

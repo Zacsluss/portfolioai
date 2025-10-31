@@ -28,7 +28,7 @@ export function Projects() {
     <section
       id="projects"
       ref={ref}
-      className="relative min-h-screen flex items-center py-20 px-4 sm:px-6 lg:px-8 overflow-hidden"
+      className="relative min-h-screen flex items-center py-[5.75rem] px-[1.15rem] sm:px-[1.725rem] lg:px-[2.3rem] overflow-hidden"
       onMouseMove={handleMouseMove}
     >
       {/* Ambient particles */}
@@ -54,41 +54,41 @@ export function Projects() {
         <div className="absolute top-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent-400/10 to-transparent" />
         <div className="absolute bottom-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent-400/10 to-transparent" />
       </div>
-      <div className="max-w-6xl mx-auto w-full">
+      <div className="max-w-7xl mx-auto w-full">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
           {/* Section Header */}
-          <div className="flex items-center gap-4 mb-12">
+          <div className="flex items-center gap-[1.15rem] mb-[3.45rem]">
             <Code2 className="w-8 h-8 text-accent-400" />
             <h2 className="text-4xl font-bold text-white quantum-heading">Projects</h2>
             <div className="flex-1 h-[2px] bg-gradient-to-r from-accent-400 to-transparent" />
           </div>
 
           {/* Projects Grid */}
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-[1.725rem]">
             {projects.map((project, index) => (
               <motion.div
                 key={project.id}
                 initial={{ opacity: 0, y: 50 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`relative glass-card-hover glass-flash rounded-lg p-6 hover:border-matrix-500/50 transition-all group ${
+                className={`relative glass-card-hover glass-flash rounded-lg p-[1.725rem] hover:border-matrix-500/50 transition-all group ${
                   project.highlighted ? 'md:col-span-2' : ''
                 }`}
               >
                 {/* Highlighted Badge */}
                 {project.highlighted && (
-                  <div className="absolute top-4 right-4 flex items-center gap-1 px-2 py-1 bg-matrix-500/20 border border-matrix-500/50 rounded-full text-xs text-accent-400">
+                  <div className="absolute top-[1.15rem] right-[1.15rem] flex items-center gap-1 px-2 py-1 bg-matrix-500/20 border border-matrix-500/50 rounded-full text-xs text-accent-400">
                     <Star className="w-3 h-3 fill-current" />
                     <span>Featured</span>
                   </div>
                 )}
 
                 {/* Content */}
-                <div className="space-y-4">
+                <div className="space-y-[1.15rem]">
                   <div>
                     <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-accent-400 transition-colors">
                       {project.title}
